@@ -243,7 +243,7 @@
             </div>
         </div>
         <div class="row m0 copyright_line">
-            Copyright &copy; 2017 twsz.com. All Rights Reserved
+            ${site.copyright}
         </div>
     </footer>
 

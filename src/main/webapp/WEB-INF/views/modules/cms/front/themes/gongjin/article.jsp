@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/taglib.jsp"%>
+<%@ taglib prefix="sitemesh" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>共进 - 企业新闻</title>
-    <title><sitemesh:title default="欢迎光临"/> - ${site.title} - Powered By JeeSite</title>
+	<title>${site.title} - 企业新闻</title>
     <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/header.jsp" %>
 
 </head>
