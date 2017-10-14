@@ -34,5 +34,11 @@ public interface ArticleDao extends CrudDao<Article> {
 //	{
 //		return update("update Article set weight=0 where weight > 0 and weightDate < current_timestamp()");
 //	}
-	
+
+	public List<Article> findAllList();
+	//	{
+//		return find("from Article all list));
+//	}
+
+
 }

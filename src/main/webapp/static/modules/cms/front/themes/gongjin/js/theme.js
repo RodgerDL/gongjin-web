@@ -22,7 +22,9 @@
               "<span class='lnr lnr-chevron-left'></span>",
               "<span class='lnr lnr-chevron-right'></span>"
               ],
-            items: 1
+            items: 1,
+            autoplaySpeed: 1600,
+            navSpeed: 1600
         });
 
         // $(window).trigger('resize');
