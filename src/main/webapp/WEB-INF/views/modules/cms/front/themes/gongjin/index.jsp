@@ -170,12 +170,12 @@
                         <c:forEach items="${page.list}" var="article">
                             <div class="post media">
                                 <div class="media-left">
-                                    <a href="articleDetail.html"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/posts/latest/1.jpg" alt=""></a>
+                                    <a href="${article.url}"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/posts/latest/1.jpg" alt=""></a>
                                 </div>
                                 <div class="media-body">
-                                    <h5><a href="articleDetail.html">${article.title}</a></h5>
+                                    <h5><a href="${article.url}">${article.title}</a></h5>
                                     <p>${article.description}</p>
-                                    <div class="row m0 timeAgo"><fmt:formatDate value="${article.updateDate}" type="both"/></div>
+                                    <div class="row m0 timeAgo"><fmt:formatDate value="${article.updateDate}" pattern="yyyy.MM.dd"/></div>
                                 </div>
                             </div>
                         </c:forEach>

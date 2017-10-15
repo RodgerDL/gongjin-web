@@ -44,7 +44,12 @@ public class Article extends DataEntity<Article> {
 	
 	private Date beginDate;	// 开始时间
 	private Date endDate;	// 结束时间
-	
+
+	private String preId;     // 前一个文章ID
+    private String preTitle;  // 前一个文章标题
+	private String nextId;    // 后一个文章ID
+    private String nextTitle; // 后一个文章标题
+
 	private User user;
     
 	public Article() {
@@ -52,6 +57,8 @@ public class Article extends DataEntity<Article> {
 		this.weight = 0;
 		this.hits = 0;
 		this.posid = "";
+		this.preId = "";
+		this.nextId = "";
 	}
 
 	public Article(String id){
@@ -69,8 +76,40 @@ public class Article extends DataEntity<Article> {
 		//super.prePersist();
 		articleData.setId(this.id);
 	}
-	
-	public Category getCategory() {
+
+	public String getPreId() {
+		return preId;
+	}
+
+	public void setPreId(String preId) {
+		this.preId = preId;
+	}
+
+	public String getNextId() {
+		return nextId;
+	}
+
+	public void setNextId(String nextId) {
+		this.nextId = nextId;
+	}
+
+    public String getPreTitle() {
+        return preTitle;
+    }
+
+    public void setPreTitle(String preTitle) {
+        this.preTitle = preTitle;
+    }
+
+    public String getNextTitle() {
+        return nextTitle;
+    }
+
+    public void setNextTitle(String nextTitle) {
+        this.nextTitle = nextTitle;
+    }
+
+    public Category getCategory() {
 		return category;
 	}
 
@@ -230,6 +269,14 @@ public class Article extends DataEntity<Article> {
    	public String getUrl() {
         return CmsUtils.getUrlDynamic(this);
    	}
+
+	public String getPreUrl() {
+		return CmsUtils.getPreUrlDynamic(this);
+	}
+
+	public String getNextUrl() {
+		return CmsUtils.getNextUrlDynamic(this);
+	}
 
    	public String getImageSrc() {
         return CmsUtils.formatImageSrcToWeb(this.image);

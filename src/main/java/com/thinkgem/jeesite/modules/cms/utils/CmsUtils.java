@@ -231,9 +231,42 @@ public class CmsUtils {
         }
         StringBuilder str = new StringBuilder();
         str.append(context.getContextPath()).append(Global.getFrontPath());
-        str.append("/view-").append(article.getCategory().getId()).append("-").append(article.getId()).append(Global.getUrlSuffix());
+//        str.append("/view-").append(article.getCategory().getId()).append("-").append(article.getId()).append(Global.getUrlSuffix());
+        str.append("/view-").append(article.getId());
         return str.toString();
     }
+
+	/**
+	 * 获得前一篇文章动态URL地址
+	 * @param article
+	 * @return url
+	 */
+	public static String getPreUrlDynamic(Article article) {
+		if(StringUtils.isNotBlank(article.getLink())){
+			return article.getLink();
+		}
+		StringBuilder str = new StringBuilder();
+		str.append(context.getContextPath()).append(Global.getFrontPath());
+//        str.append("/view-").append(article.getCategory().getId()).append("-").append(article.getId()).append(Global.getUrlSuffix());
+		str.append("/view-").append(article.getPreId());
+		return str.toString();
+	}
+
+	/**
+	 * 获得后一篇文章动态URL地址
+	 * @param article
+	 * @return url
+	 */
+	public static String getNextUrlDynamic(Article article) {
+		if(StringUtils.isNotBlank(article.getLink())){
+			return article.getLink();
+		}
+		StringBuilder str = new StringBuilder();
+		str.append(context.getContextPath()).append(Global.getFrontPath());
+//        str.append("/view-").append(article.getCategory().getId()).append("-").append(article.getId()).append(Global.getUrlSuffix());
+		str.append("/view-").append(article.getNextId());
+		return str.toString();
+	}
 
     /**
      * 获得栏目动态URL地址
