@@ -87,7 +87,7 @@
                             <c:forEach items="${page.list}" var="article">
                                 <div class="post media">
                                     <div class="media-left">
-                                        <a href="${article.url}"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/posts/recent/1.jpg" alt=""></a>
+                                        <a href="${article.url}"><img src="${article.image}" alt=""></a>
                                     </div>
                                     <div class="media-body">
                                         <h5><a href="${article.url}">${article.title}</a></h5>
