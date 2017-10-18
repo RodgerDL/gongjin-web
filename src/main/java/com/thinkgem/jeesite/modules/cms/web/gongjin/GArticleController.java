@@ -70,8 +70,15 @@ public class GArticleController extends BaseController{
 			}else{
 				categoryList = categoryService.findByParentId(category.getParent().getId(), category.getSite().getId());
 			}
+
+			Article paramArticle = new Article();
+			Category paramCategory = new Category();
+			paramCategory.setId(categoryId);
+			paramArticle.setId(contentId);
+			paramArticle.setCategory(paramCategory);
+
 			// 获取文章内容
-			Article article = articleService.get(contentId);
+			Article article = gArticleService.getArticle(paramArticle);
 			if (article==null || !Article.DEL_FLAG_NORMAL.equals(article.getDelFlag())){
 				return "error/404";
 			}

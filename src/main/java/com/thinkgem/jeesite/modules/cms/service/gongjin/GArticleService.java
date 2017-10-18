@@ -55,4 +55,14 @@ public class GArticleService extends CrudService<ArticleDao, Article> {
         return super.findPage(page, article);
     }
 
+    /**
+     * 获取内容
+     * @return new article
+     */
+    @Transactional(readOnly = false)
+    public Article getArticle(Article article) {
+
+        return articleDao.getArticle(article);
+    }
+
 }

@@ -30,7 +30,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/logo.png" alt=""></a>
+                <a class="navbar-brand" href="/${site.theme}/web""><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/logo.png" alt=""></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,7 @@
         <div class="container">
             <h3>企业新闻</h3>
             <ol class="breadcrumb">
-                <li><a href="index.html">首页</a></li>
+                <li><a href="/${site.theme}/web"">首页</a></li>
                 <li class="active">企业新闻</li>
             </ol>
         </div>

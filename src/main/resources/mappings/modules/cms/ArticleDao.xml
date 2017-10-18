@@ -24,28 +24,38 @@
 		a.remarks AS "remarks",
 		a.del_flag AS "delFlag",
 		c.name AS "category.name",
-		u.name AS "user.name",
-		p.id AS "preId",
-		p.title AS "preTitle",
-		n.id AS "nextId",
-		n.title AS "nextTitle"
+		u.name AS "user.name"
 	</sql>
 	
 	<sql id="cmsArticleJoins">
 		JOIN cms_category c ON c.id = a.category_id
 		JOIN sys_office o ON o.id = c.office_id
 		JOIN sys_user u ON u.id = a.create_by
-		LEFT OUTER JOIN cms_article p ON a.id = (p.id+1)
-		LEFT OUTER JOIN cms_article n ON a.id = (n.id-1)
 	</sql>
     
 	<select id="get" resultType="Article">
 		SELECT 
-			<include refid="cmsArticleColumns"/>
+        <include refid="cmsArticleColumns"/>
 		FROM cms_article a
 		<include refid="cmsArticleJoins"/>
 		WHERE a.id = #{id}
 	</select>
+
+    <select id="getArticle" resultType="Article">
+        SELECT
+        <include refid="cmsArticleColumns"/>
+        ,
+        p.id AS "preId",
+        p.title AS "preTitle",
+        n.id AS "nextId",
+        n.title AS "nextTitle"
+        FROM cms_article a
+        <include refid="cmsArticleJoins"/>
+        LEFT OUTER JOIN (SELECT * FROM cms_article WHERE category_id = #{category.id} ORDER BY update_date asc) p ON p.update_date > a.update_date
+        LEFT OUTER JOIN (SELECT * FROM cms_article WHERE category_id = #{category.id} ORDER BY update_date asc) n ON a.update_date > n.update_date
+        WHERE a.id = #{id}
+        LIMIT 1
+    </select>
 	
 	<select id="findList" resultType="Article">
 		SELECT 

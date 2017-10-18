@@ -40,5 +40,7 @@ public interface ArticleDao extends CrudDao<Article> {
 //		return find("from Article all list));
 //	}
 
+	public Article getArticle(Article article);
+
 
 }
