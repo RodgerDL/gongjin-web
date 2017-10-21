@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse" id="main_navigation">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="/${site.theme}/web"">首页</a></li>
-                    <li><a href="features.html">产品及服务</a></li>
+                    <li><a href="/gongjin/web/product">产品及服务</a></li>
                     <li><a href="firmInfo.html">企业相关</a></li>
                     <li><a href="recruitment.html">招聘信息</a></li>
                     <li><a href="contact.html">联系我们</a></li>

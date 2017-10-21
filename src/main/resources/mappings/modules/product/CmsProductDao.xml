@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.product.dao.CmsProductDao">
+    
+	<sql id="cmsProductColumns">
+		a.id AS "id",
+		a.kd_id AS "cmsProductKind.id",
+		a.pd_order AS "pdOrder",
+		a.pd_name AS "pdName",
+		a.pd_nm AS "pdNm",
+		a.pd_introduce AS "pdIntroduce",
+		a.pd_img AS "pdImg",
+		a.pd_file AS "pdFile",
+		a.pd_mv AS "pdMv",
+		a.pd_title1 AS "pdTitle1",
+		a.pd_intr1 AS "pdIntr1",
+		a.pd_title2 AS "pdTitle2",
+		a.pd_intr2 AS "pdIntr2",
+		a.pd_title3 AS "pdTitle3",
+		a.pd_intr3 AS "pdIntr3",
+		a.pd_title4 AS "pdTitle4",
+		a.pd_intr4 AS "pdIntr4",
+		a.pd_title5 AS "pdTitle5",
+		a.pd_intr5 AS "pdIntr5",
+		a.pd_title6 AS "pdTitle6",
+		a.pd_intr6 AS "pdIntr6",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag"
+	</sql>
+	
+	<sql id="cmsProductJoins">
+		LEFT JOIN cms_product_kind b ON b.id = a.kd_id
+	</sql>
+    
+	<select id="get" resultType="CmsProduct">
+		SELECT 
+			<include refid="cmsProductColumns"/>
+		FROM cms_product a
+		<include refid="cmsProductJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="CmsProduct">
+		SELECT 
+			<include refid="cmsProductColumns"/>
+		FROM cms_product a
+		<include refid="cmsProductJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="cmsProductKind != null and cmsProductKind.id != null and cmsProductKind.id != ''">
+				AND a.kd_id = #{cmsProductKind.id}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.create_date ASC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="CmsProduct">
+		SELECT 
+			<include refid="cmsProductColumns"/>
+		FROM cms_product a
+		<include refid="cmsProductJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.create_date ASC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO cms_product(
+			id,
+			kd_id,
+			pd_order,
+			pd_name,
+			pd_nm,
+			pd_introduce,
+			pd_img,
+			pd_file,
+			pd_mv,
+			pd_title1,
+			pd_intr1,
+			pd_title2,
+			pd_intr2,
+			pd_title3,
+			pd_intr3,
+			pd_title4,
+			pd_intr4,
+			pd_title5,
+			pd_intr5,
+			pd_title6,
+			pd_intr6,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag
+		) VALUES (
+			#{id},
+			#{cmsProductKind.id},
+			#{pdOrder},
+			#{pdName},
+			#{pdNm},
+			#{pdIntroduce},
+			#{pdImg},
+			#{pdFile},
+			#{pdMv},
+			#{pdTitle1},
+			#{pdIntr1},
+			#{pdTitle2},
+			#{pdIntr2},
+			#{pdTitle3},
+			#{pdIntr3},
+			#{pdTitle4},
+			#{pdIntr4},
+			#{pdTitle5},
+			#{pdIntr5},
+			#{pdTitle6},
+			#{pdIntr6},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE cms_product SET 	
+			kd_id = #{cmsProductKind.id},
+			pd_order = #{pdOrder},
+			pd_name = #{pdName},
+			pd_nm = #{pdNm},
+			pd_introduce = #{pdIntroduce},
+			pd_img = #{pdImg},
+			pd_file = #{pdFile},
+			pd_mv = #{pdMv},
+			pd_title1 = #{pdTitle1},
+			pd_intr1 = #{pdIntr1},
+			pd_title2 = #{pdTitle2},
+			pd_intr2 = #{pdIntr2},
+			pd_title3 = #{pdTitle3},
+			pd_intr3 = #{pdIntr3},
+			pd_title4 = #{pdTitle4},
+			pd_intr4 = #{pdIntr4},
+			pd_title5 = #{pdTitle5},
+			pd_intr5 = #{pdIntr5},
+			pd_title6 = #{pdTitle6},
+			pd_intr6 = #{pdIntr6},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE cms_product SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		<choose>
+			<when test="id !=null and id != ''">
+				WHERE id = #{id}
+			</when>
+			<otherwise>
+				WHERE kd_id = #{cmsProductKind.id}
+			</otherwise>
+		</choose>
+	</update>
+	
+</mapper>

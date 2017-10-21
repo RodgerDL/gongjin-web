@@ -1,60 +1,11 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/taglib.jsp"%>
+<%@ taglib prefix="sitemesh" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>共进 - 产品</title>
-    
-    <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#e74c3c">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#e74c3c">
-    
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    
-    <!--Loader-->
-    <link rel="stylesheet" href="css/spinners.css">
-    
-    
-    <!-- Vendors -->
-    <link rel="stylesheet" href="vendors/owl.carousel/owl.carousel.css">
-    <link rel="stylesheet" href="vendors/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/lineariconsFree/style.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    
-    <!--Fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    
-    <!--Theme Styles-->
-    <link rel="stylesheet" href="css/default/style.css">
-    <!--<link rel="stylesheet" href="css/responsive/responsive.css">-->
-    
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif]-->
-    
+	<title>${site.title} - 产品及服务</title>
+    <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/header.jsp" %>
 </head>
 <body class="shortcode">
     
@@ -483,70 +434,8 @@
     </section>
 
     <footer class="row">
-        <div class="top_footer row m0">
-            <div class="container">
-                <div class="row m0 quick_contact">
-                    <ul class="nav nav-pills">
-                        <li><a href="tel:1234567890"><i class="lnr lnr-phone"></i>123 - 456 - 7890</a></li>
-                        <li><a href="mailto:info@hostpress.com"><i class="lnr lnr-envelope"></i>info@exmaple.com</a></li>
-                        <li><a href="#"><i class="lnr lnr-bubble"></i>联系我们</a></li>
-                    </ul>
-                </div>
-                <div class="row shortKnowledge">
-                    <div class="col-sm-6 about">
-                        <h4><a href="index.html"><img src="images/logo.png" alt=""></a></h4>
-                        <p>深圳市共进电子股份有限公司自1998年创始，以 “发展企业，培养人才，回馈社会”为宗旨，拥有“T&W”商标。2015年2月登陆上交所A股市场，证券代码为603118。公司积多年发展厚势，追求卓越，永不止步。作为全球领先的宽带通信终端产品制造商，共进股份二次创业，再扬风帆，专业从事宽带终端、智慧产品和互联网健康业务。</p>
-                    </div>
-                    <div class="col-sm-6 product">
-                        <h4>产品</h4>
-                        <ul class="product_list nav">
-                            <li><a href="#">SMALL CELL</a></li>
-                            <li><a href="#">HOME、SOHO</a></li>
-                            <li><a href="#">4G/3G NANOCELL</a></li>
-                            <li><a href="#">多模NANOCELL</a></li>
-                            <li><a href="#">SME中小型企业</a></li>
-                            <li><a href="#">热点区域</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row m0 copyright_line">
-            Copyright &copy; 2017 twsz.com. All Rights Reserved
-        </div>
+		<%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
     </footer>
-    
-    <!--jQuery, Bootstrap and other vendor JS-->
-    
-    <!--jQuery-->
-    <script src="js/jquery-2.1.4.min.js"></script>
-    
-    <!--Bootstrap JS-->
-    <script src="js/bootstrap.min.js"></script>
-    
-    <!--Bootstrap Select-->
-    <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    
-    <!--Owl Carousel-->
-    <script src="vendors/owl.carousel/owl.carousel.min.js"></script>
-    
-    <!--Waypoints-->
-    <script src="vendors/waypoints/waypoints.min.js"></script>
-    
-    <!--Counter Up-->
-    <script src="vendors/counterup/jquery.counterup.min.js"></script>
-    
-    <!--Magnific Popup-->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    
-    <!--Isotope-->
-    <script src="vendors/isotope/isotope.min.js"></script>
-    
-    <!--Isotope-->
-    <script src="vendors/infinitescrol/jquery.infinitescroll.min.js"></script>
-    
-    <!--Theme JS-->
-    <script src="js/theme.js"></script>
 
 </body>
-</html>
+</html></html>
