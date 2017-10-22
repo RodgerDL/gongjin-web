@@ -27,7 +27,7 @@ import com.thinkgem.jeesite.modules.cms.service.CategoryService;
 import com.thinkgem.jeesite.modules.cms.service.SiteService;
 
 /**
- * 网站Controller
+ * 新闻Controller
  * @author Roger
  * @version 2017-10-01
  */

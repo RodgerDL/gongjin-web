@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.thinkgem.jeesite.modules.cms.service.gongjin.GArticleService;
 
 /**
- * 网站Controller
+ * 网站首页Controller
  * @author Roger
  * @version 2017-10-01
  */

@@ -31,6 +31,7 @@ public class Article extends DataEntity<Article> {
     private String link;	// 外部链接
 	private String color;	// 标题颜色（red：红色；green：绿色；blue：蓝色；yellow：黄色；orange：橙色）
 	private String image;	// 文章图片
+	private String bannerImage; //文章标题图片
 	private String keywords;// 关键字
 	private String description;// 描述、摘要
 	private Integer weight;	// 权重，越大越靠前
@@ -150,6 +151,14 @@ public class Article extends DataEntity<Article> {
 
 	public void setImage(String image) {
         this.image = image;//CmsUtils.formatImageSrcToDb(image);
+	}
+
+	public String getBannerImage() {
+		return bannerImage;
+	}
+
+	public void setBannerImage(String bannerImage) {
+		this.bannerImage = bannerImage;
 	}
 
 	@Length(min=0, max=255)
@@ -281,6 +290,10 @@ public class Article extends DataEntity<Article> {
    	public String getImageSrc() {
         return CmsUtils.formatImageSrcToWeb(this.image);
    	}
+
+	public String getBannerImageSrc() {
+		return CmsUtils.formatImageSrcToWeb(this.bannerImage);
+	}
 	
 }
 
