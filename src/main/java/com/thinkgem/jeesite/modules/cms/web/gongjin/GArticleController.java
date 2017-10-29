@@ -52,7 +52,7 @@ public class GArticleController extends BaseController{
 	@RequestMapping(value = "view-{contentId}")
 	public String view(@PathVariable String contentId, Model model) {
 
-	    // 设定默认值
+	    // 设定默认值 - 公司新闻
 	    String categoryId = "3";
 
 		Category category = categoryService.get(categoryId);

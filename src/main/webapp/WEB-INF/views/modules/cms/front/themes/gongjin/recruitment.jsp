@@ -69,191 +69,43 @@
 				<div class="">
 					<h3 class="widgetTitle">招聘信息</h3>
 					<div class="panel-group accordion" id="accordion_sc" role="tablist" aria-multiselectable="true">
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="heading1">
-								<h3 class="panel-title">
-									<a role="button" data-toggle="collapse" data-parent="#accordion_sc" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-										技术类
-									</a>
-								</h3>
-							</div>
-							<div id="collapse1" class="panel-collapse collapse in" role="tabpane1" aria-labelledby="heading1">
-								<div class="panel-body">
-									<h4 class="panel-title">
-										硬件工程师
-									</h4>
-									<ul class="hostpressUnList">
-										<li style="margin-top: 15px;">工作地点</li>
-										<ol>
-											<li style="margin-top: 0px;">辽宁省大连市沙河口区五一路267号17号楼101号房间</li>
-										</ol>
-										<li style="margin-top: 15px;">工作职责</li>
-										<ol>
-											<li style="margin-top: 0px;">负责通信系统软件模块的设计</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的编码</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的测试 </li>
-										</ol>
-										<li style="margin-top: 15px;">岗位要求</li>
-										<ol>
-											<li style="margin-top: 0px;">英语六级以上；</li>
-											<li style="margin-top: 0px;">性格开朗，乐于助人；</li>
-											<li style="margin-top: 0px;">喜欢人际交往；</li>
-											<li style="margin-top: 0px;">沟通能力强；</li>
-										</ol>
-									</ul>
+					    <c:forEach items="${fns:getDictList('cms_recruitment_category')}" var="dict">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading1">
+                                    <h3 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion_sc" href="#collapse${dict.value}" aria-expanded="true" aria-controls="collapse1">
+                                            ${dict.label}
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div id="collapse${dict.value}" class="panel-collapse collapse in" role="tabpane1" aria-labelledby="heading1">
+                                    <c:forEach items="${result}" var="recruitment">
+                                        <c:if test="${dict.value eq recruitment.categoryId}">
+                                            <div class="panel-body">
+                                                <h4 class="panel-title">
+                                                    ${recruitment.jobTitle}
+                                                </h4>
+                                                <ul class="hostpressUnList">
+                                                    <li style="margin-top: 15px;">工作地点</li>
+                                                    <ol>
+                                                        ${recruitment.jobLocation}
+                                                    </ol>
+                                                    <li style="margin-top: 15px;">工作职责</li>
+                                                    <ol>
+                                                        ${recruitment.jobResponsibility}
+                                                    </ol>
+                                                    <li style="margin-top: 15px;">岗位要求</li>
+                                                    <ol>
+                                                        ${recruitment.jobRequirement}
+                                                    </ol>
+                                                </ul>
+                                            </div>
+                                        </c:if>
+                                    </c:forEach>
+                                </div>
+                            </div>
+                        </c:forEach>
 
-								</div>
-								<div class="panel-body">
-									<h4 class="panel-title">
-										技术工程师
-									</h4>
-									<ul class="hostpressUnList">
-										<li style="margin-top: 15px;">工作地点</li>
-										<ol>
-											<li style="margin-top: 0px;">辽宁省大连市沙河口区五一路267号17号楼101号房间</li>
-										</ol>
-										<li style="margin-top: 15px;">工作职责</li>
-										<ol>
-											<li style="margin-top: 0px;">负责通信系统软件模块的设计</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的编码</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的测试 </li>
-										</ol>
-										<li style="margin-top: 15px;">岗位要求</li>
-										<ol>
-											<li style="margin-top: 0px;">英语六级以上；</li>
-											<li style="margin-top: 0px;">性格开朗，乐于助人；</li>
-											<li style="margin-top: 0px;">喜欢人际交往；</li>
-											<li style="margin-top: 0px;">沟通能力强；</li>
-										</ol>
-									</ul>
-
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="heading2">
-								<h3 class="panel-title">
-									<a role="button" data-toggle="collapse" data-parent="#accordion_sc" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
-										营销类
-									</a>
-								</h3>
-							</div>
-							<div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-								<div class="panel-body">
-									<h4 class="panel-title">
-										硬件工程师
-									</h4>
-									<ul class="hostpressUnList">
-										<li style="margin-top: 15px;">工作地点</li>
-										<ol>
-											<li style="margin-top: 0px;">辽宁省大连市沙河口区五一路267号17号楼101号房间</li>
-										</ol>
-										<li style="margin-top: 15px;">工作职责</li>
-										<ol>
-											<li style="margin-top: 0px;">负责通信系统软件模块的设计</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的编码</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的测试 </li>
-										</ol>
-										<li style="margin-top: 15px;">岗位要求</li>
-										<ol>
-											<li style="margin-top: 0px;">英语六级以上；</li>
-											<li style="margin-top: 0px;">性格开朗，乐于助人；</li>
-											<li style="margin-top: 0px;">喜欢人际交往；</li>
-											<li style="margin-top: 0px;">沟通能力强；</li>
-										</ol>
-									</ul>
-
-								</div>
-								<div class="panel-body">
-									<h4 class="panel-title">
-										技术工程师
-									</h4>
-									<ul class="hostpressUnList">
-										<li style="margin-top: 15px;">工作地点</li>
-										<ol>
-											<li style="margin-top: 0px;">辽宁省大连市沙河口区五一路267号17号楼101号房间</li>
-										</ol>
-										<li style="margin-top: 15px;">工作职责</li>
-										<ol>
-											<li style="margin-top: 0px;">负责通信系统软件模块的设计</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的编码</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的测试 </li>
-										</ol>
-										<li style="margin-top: 15px;">岗位要求</li>
-										<ol>
-											<li style="margin-top: 0px;">英语六级以上；</li>
-											<li style="margin-top: 0px;">性格开朗，乐于助人；</li>
-											<li style="margin-top: 0px;">喜欢人际交往；</li>
-											<li style="margin-top: 0px;">沟通能力强；</li>
-										</ol>
-									</ul>
-
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div class="panel-heading" role="tab" id="heading3">
-								<h3 class="panel-title">
-									<a role="button" data-toggle="collapse" data-parent="#accordion_sc" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
-										制造类
-									</a>
-								</h3>
-							</div>
-							<div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-								<div class="panel-body">
-									<h4 class="panel-title">
-										硬件工程师
-									</h4>
-									<ul class="hostpressUnList">
-										<li style="margin-top: 15px;">工作地点</li>
-										<ol>
-											<li style="margin-top: 0px;">辽宁省大连市沙河口区五一路267号17号楼101号房间</li>
-										</ol>
-										<li style="margin-top: 15px;">工作职责</li>
-										<ol>
-											<li style="margin-top: 0px;">负责通信系统软件模块的设计</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的编码</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的测试 </li>
-										</ol>
-										<li style="margin-top: 15px;">岗位要求</li>
-										<ol>
-											<li style="margin-top: 0px;">英语六级以上；</li>
-											<li style="margin-top: 0px;">性格开朗，乐于助人；</li>
-											<li style="margin-top: 0px;">喜欢人际交往；</li>
-											<li style="margin-top: 0px;">沟通能力强；</li>
-										</ol>
-									</ul>
-
-								</div>
-								<div class="panel-body">
-									<h4 class="panel-title">
-										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_sc" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
-											技术工程师
-										</a>
-									</h4>
-									<ul class="hostpressUnList">
-										<li style="margin-top: 15px;">工作地点</li>
-										<ol>
-											<li style="margin-top: 0px;">辽宁省大连市沙河口区五一路267号17号楼101号房间</li>
-										</ol>
-										<li style="margin-top: 15px;">工作职责</li>
-										<ol>
-											<li style="margin-top: 0px;">负责通信系统软件模块的设计</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的编码</li>
-											<li style="margin-top: 0px;">负责通信系统软件模块的测试 </li>
-										</ol>
-										<li style="margin-top: 15px;">岗位要求</li>
-										<ol>
-											<li style="margin-top: 0px;">英语六级以上；</li>
-											<li style="margin-top: 0px;">性格开朗，乐于助人；</li>
-											<li style="margin-top: 0px;">喜欢人际交往；</li>
-											<li style="margin-top: 0px;">沟通能力强；</li>
-										</ol>
-									</ul>
-
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
