@@ -145,15 +145,14 @@
 							</td>
 							<td>
 								<input id="cmsProductList{{idx}}_pdImg" name="cmsProductList[{{idx}}].pdImg" type="hidden" value="{{row.pdImg}}" maxlength="255"/>
-								<sys:ckfinder input="cmsProductList{{idx}}_pdImg" type="files" uploadPath="/product/cmsProductKind" selectMultiple="true"/>
+								<sys:ckfinder input="cmsProductList{{idx}}_pdImg" type="files" uploadPath="/product/cmsProductKind" selectMultiple="false"/>
 							</td>
 							<td>
 								<input id="cmsProductList{{idx}}_pdFile" name="cmsProductList[{{idx}}].pdFile" type="hidden" value="{{row.pdFile}}" maxlength="255"/>
-								<sys:ckfinder input="cmsProductList{{idx}}_pdFile" type="files" uploadPath="/product/cmsProductKind" selectMultiple="true"/>
+								<sys:ckfinder input="cmsProductList{{idx}}_pdFile" type="files" uploadPath="/product/cmsProductKind" selectMultiple="false"/>
 							</td>
 							<td>
-								<input id="cmsProductList{{idx}}_pdMv" name="cmsProductList[{{idx}}].pdMv" type="hidden" value="{{row.pdMv}}" maxlength="255"/>
-								<sys:ckfinder input="cmsProductList{{idx}}_pdMv" type="files" uploadPath="/product/cmsProductKind" selectMultiple="true"/>
+								<input id="cmsProductList{{idx}}_pdMv" name="cmsProductList[{{idx}}].pdMv" type="text" value="{{row.pdMv}}" maxlength="255" class="input-small required"/>
 							</td>
 							<td>
 								<textarea id="cmsProductList{{idx}}_pdTitle1" name="cmsProductList[{{idx}}].pdTitle1" rows="4" maxlength="255" class="input-small ">{{row.pdTitle1}}</textarea>

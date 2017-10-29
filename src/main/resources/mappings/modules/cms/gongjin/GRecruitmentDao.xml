@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.cms.dao.gongjin.GRecruitmentDao">
+    
+	<sql id="cmsRecruitmentColumns">
+		a.id AS "id",
+		a.category_id AS "categoryId",
+        c.label AS "categoryName",
+		a.job_title AS "jobTitle",
+		a.job_location AS "jobLocation",
+		a.job_responsibility AS "jobResponsibility",
+		a.job_requirement AS "jobRequirement",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag"
+	</sql>
+	
+	<sql id="cmsRecruitmentJoins">
+        JOIN sys_dict c ON c.value = a.category_id and c.type="cms_recruitment_category"
+	</sql>
+    
+	<select id="get" resultType="GRecruitment">
+		SELECT 
+			<include refid="cmsRecruitmentColumns"/>
+		FROM cms_recruitment a
+		<include refid="cmsRecruitmentJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="GRecruitment">
+		SELECT 
+			<include refid="cmsRecruitmentColumns"/>
+		FROM cms_recruitment a
+		<include refid="cmsRecruitmentJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="GRecruitment">
+		SELECT 
+			<include refid="cmsRecruitmentColumns"/>
+		FROM cms_recruitment a
+		<include refid="cmsRecruitmentJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO cms_recruitment(
+			id,
+			category_id,
+			job_title,
+			job_location,
+			job_responsibility,
+			job_requirement,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag
+		) VALUES (
+			#{id},
+			#{categoryId},
+			#{jobTitle},
+			#{jobLocation},
+			#{jobResponsibility},
+			#{jobRequirement},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE cms_recruitment SET 	
+			category_id = #{categoryId},
+			job_title = #{jobTitle},
+			job_location = #{jobLocation},
+			job_responsibility = #{jobResponsibility},
+			job_requirement = #{jobRequirement},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE cms_recruitment SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

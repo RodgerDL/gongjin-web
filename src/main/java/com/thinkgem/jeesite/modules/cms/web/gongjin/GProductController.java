@@ -24,6 +24,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.thinkgem.jeesite.modules.cms.service.ArticleService;
 import com.thinkgem.jeesite.modules.cms.service.CategoryService;
 import com.thinkgem.jeesite.modules.cms.service.SiteService;
+import com.thinkgem.jeesite.modules.cms.service.gongjin.GArticleService;
+import com.thinkgem.jeesite.modules.cms.service.gongjin.GProductService;
 
 /**
  * 网站Controller
@@ -34,16 +36,8 @@ import com.thinkgem.jeesite.modules.cms.service.SiteService;
 @RequestMapping(value = "${frontPath}")
 public class GProductController extends BaseController{
 
-//	@Autowired
-//	private GProductService gProductService;
-//	@Autowired
-//	private ArticleService articleService;
-//	@Autowired
-//	private ArticleDataService articleDataService;
-//	@Autowired
-//	private CategoryService categoryService;
-//	@Autowired
-//	private SiteService siteService;
+	@Autowired
+	private GProductService gProductService;
 
 	/**
 	 * 显示内容
@@ -51,17 +45,7 @@ public class GProductController extends BaseController{
 	@RequestMapping(value = "product")
 	public String product(Model model) {
 
-//	    // 设定默认值
-//	    String categoryId = "3";
-//
-//		Category category = categoryService.get(categoryId);
-//		if (category==null){
-//			Site site = CmsUtils.getSite(Site.defaultSiteId());
-//			model.addAttribute("site", site);
-//			return "error/404";
-//		}
-//		model.addAttribute("site", category.getSite());
-//		if ("article".equals(category.getModule())){
+		model.addAttribute("product", gProductService.getProduct());
 //			// 如果没有子栏目，并父节点为跟节点的，栏目列表为当前栏目。
 //			List<Category> categoryList = Lists.newArrayList();
 //			if (category.getParent().getId().equals("1")){
@@ -75,8 +59,8 @@ public class GProductController extends BaseController{
 //			paramCategory.setId(categoryId);
 //			paramArticle.setId(contentId);
 //			paramArticle.setCategory(paramCategory);
-//
-//			// 获取文章内容
+
+			// 获取文章内容
 //			Article article = gProductService.getArticle(paramArticle);
 //			if (article==null || !Article.DEL_FLAG_NORMAL.equals(article.getDelFlag())){
 //				return "error/404";
@@ -97,11 +81,9 @@ public class GProductController extends BaseController{
 //            //System.out.println(page.getPageNo());
 //            page = gProductService.findPage(page, new Article(category), false);
 //            model.addAttribute("page", page);
-//
+
 //            return "modules/cms/front/themes/gongjin/articleDetail";
-//		}
-//		return "error/404";
-		return "modules/cms/front/themes/gongjin/product";
+			return "modules/cms/front/themes/gongjin/product";
 	}
 
 }

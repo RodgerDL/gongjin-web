@@ -39,7 +39,7 @@
                     <li class="active"><a href="/${site.theme}/web"">首页</a></li>
                     <li><a href="/gongjin/web/product">产品及服务</a></li>
                     <li><a href="firmInfo.html">企业相关</a></li>
-                    <li><a href="recruitment.html">招聘信息</a></li>
+                    <li><a href="/${site.theme}/web/recruitment">招聘信息</a></li>
                     <li><a href="contact.html">联系我们</a></li>
                 </ul>
             </div>

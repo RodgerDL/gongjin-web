@@ -6,6 +6,31 @@
 <head>
 	<title>${site.title} - 产品及服务</title>
     <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/header.jsp" %>
+    
+	<style type="text/css">
+	.imgcl{
+		width: 350px;
+		height: 369px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	
+	</style>
+	
+	<script type="text/javascript">
+		
+		function inita(){
+
+		}		
+		
+		
+	</script>
 </head>
 <body class="shortcode">
     
@@ -72,10 +97,16 @@
             <div class="container">
                 <div class="row">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#featureT1" aria-controls="featureT1" role="tab" data-toggle="tab">LTE皮基站</a></li>
-                        <li role="presentation"><a href="#featureT2" aria-controls="featureT2" role="tab" data-toggle="tab">LTE飞基站</a></li>
-                        <li role="presentation"><a href="#featureT3" aria-controls="featureT3" role="tab" data-toggle="tab">LTE专网模块</a></li>
-                        <li role="presentation"><a href="#featureT4" aria-controls="featureT4" role="tab" data-toggle="tab">LTE网关与网管</a></li>
+					<c:forEach items="${product}" var="productKind" varStatus="statusTitle">
+						<c:choose>  
+						   <c:when test="${statusTitle.first}">
+						   	  <li role="presentation" class="active"><a href="#featureT${ statusTitle.count}" onclick="inita()" aria-controls="featureT${ statusTitle.count}" role="tab" data-toggle="tab">${productKind.kd_name}</a></li>
+						   </c:when>  
+						   <c:otherwise>
+						      <li role="presentation"><a href="#featureT${ statusTitle.count}" aria-controls="featureT${ statusTitle.count}" role="tab" data-toggle="tab">${productKind.kd_name}</a></li>
+						   </c:otherwise>  
+						</c:choose>
+					</c:forEach>
                     </ul>
                 </div>
             </div>
@@ -84,351 +115,100 @@
         <div class="row m0 featureTab_contents">
 
             <div class="tab-content">
+            
+			<c:forEach items="${product}" var="productKind" varStatus="statusKind">
+				<c:choose>  
+				   <c:when test="${statusKind.first}">
+				   	  <div class="tab-pane active" role="tabpanel" id="featureT${ statusKind.count}">
+				   </c:when>  
+				   <c:otherwise>
+				      <div class="tab-pane" role="tabpanel" id="featureT${ statusKind.count}">
+				   </c:otherwise>  
+				</c:choose>
+				<c:choose>  
+				   <c:when test="${product.size() > 1}">
+		                    <section class="row slider app-landing-features section-padding">
+		                        <div id="owldiv" class="owl-carousel home_slider">
 
-                <div class="tab-pane active" role="tabpanel" id="featureT1">
-
-                    <section class="row slider app-landing-features section-padding">
-                        <div class="owl-carousel home_slider">
-                            <div class="item container owl-slide">
-                                <div class="row section-title">
-                                    <div class="col col-lg-8 col-lg-offset-2">
-                                        <h2>LTE室内型双载波皮基站</h2>
-                                        <p>HN1830 TD-SCDMA/TD-LTE双模家用基站，针对于覆盖和容量较弱的家庭覆盖场景，如公寓，别墅，老房子等，利用已有宽带连接，使用双模飞基站进行室内3G/4G信号的精确覆盖和容量提升。</p>
-                                    </div>
-                                </div> <!-- end section-title -->
-
-                                <div class="row content">
-                                    <div class="col col-md-4 left-col">
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>工作频段</h3>
-                                                <p>1.6MHz，同时支持1.4MHz载波压缩</p>
-                                            </div>
-                                        </div>
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>容量</h3>
-                                                <p>支持32个并发数据或者VOLTE用户</p>
-                                            </div>
-                                        </div>
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>性能</h3>
-                                                <p>最大输出功率: 100mW（双流） </p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end col -->
-
-                                    <div class="col col-md-4 col-md-offset-4 right-col">
-                                        <div class="feature">
-
-                                            <div class="details">
-                                                <h3>WIFI</h3>
-                                                <p style="height: 56px;">Wi-Fi最大输出功率: 20dBm</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>尺寸</h3>
-                                                <p>173（长）X131（宽）X35（高）mm（不含外置天线高度）</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>接口</h3>
-                                                <p>ANT×2（LTE MIMO）</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end row -->
-                                <div class="row section-title">
-
-                                </div>
-                                <div class="row section-title">
-                                    <a href="#" class="btn btn-primary">文档下载</a>
-                                    <a href="#" class="btn btn-primary">视频下载</a>
-                                </div>
-                            </div>
-                            <div class="item container owl-slide">
-                                <div class="row section-title">
-                                    <div class="col col-lg-8 col-lg-offset-2">
-                                        <h2>LTE室外型双载波皮基站</h2>
-                                        <p>HN1830 TD-SCDMA/TD-LTE双模家用基站，针对于覆盖和容量较弱的家庭覆盖场景，如公寓，别墅，老房子等，利用已有宽带连接，使用双模飞基站进行室内3G/4G信号的精确覆盖和容量提升。</p>
-                                    </div>
-                                </div> <!-- end section-title -->
-
-                                <div class="row content">
-                                    <div class="col col-md-4 left-col">
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>工作频段</h3>
-                                                <p>1.6MHz，同时支持1.4MHz载波压缩</p>
-                                            </div>
-                                        </div>
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>容量</h3>
-                                                <p>支持32个并发数据或者VOLTE用户</p>
-                                            </div>
-                                        </div>
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>性能</h3>
-                                                <p>最大输出功率: 100mW（双流） </p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end col -->
-
-                                    <div class="col col-md-4 col-md-offset-4 right-col">
-                                        <div class="feature">
-
-                                            <div class="details">
-                                                <h3>WIFI</h3>
-                                                <p style="height: 56px;">Wi-Fi最大输出功率: 20dBm</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>尺寸</h3>
-                                                <p>173（长）X131（宽）X35（高）mm（不含外置天线高度）</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="feature">
-                                            <div class="details">
-                                                <h3>接口</h3>
-                                                <p>ANT×2（LTE MIMO）</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end row -->
-                                <div class="row section-title">
-
-                                </div>
-                                <div class="row section-title">
-                                    <a href="#" class="btn btn-primary">文档下载</a>
-                                    <a href="#" class="btn btn-primary">视频下载</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-                <div class="tab-pane" role="tabpanel" id="featureT2" >
-
-                    <!-- start app-landing-features -->
-                    <section class="app-landing-features section-padding">
-                        <div class="container">
-                            <div class="row section-title">
-                                <div class="col col-lg-8 col-lg-offset-2">
-                                    <h2>3G/4G双模飞基站HN1830</h2>
-                                    <p>HN1830 TD-SCDMA/TD-LTE双模家用基站，针对于覆盖和容量较弱的家庭覆盖场景，如公寓，别墅，老房子等，利用已有宽带连接，使用双模飞基站进行室内3G/4G信号的精确覆盖和容量提升。</p>
-                                </div>
-                            </div> <!-- end section-title -->
-
-                            <div class="row content">
-                                <div class="col col-md-4 left-col">
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>工作频段</h3>
-                                            <p>1.6MHz，同时支持1.4MHz载波压缩</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>容量</h3>
-                                            <p>支持32个并发数据或者VOLTE用户</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>性能</h3>
-                                            <p>最大输出功率: 100mW（双流） </p>
-                                        </div>
-                                    </div>
-                                </div> <!-- end col -->
-
-                                <div class="col col-md-4 col-md-offset-4 right-col">
-                                    <div class="feature">
-
-                                        <div class="details">
-                                            <h3>WIFI</h3>
-                                            <p style="height: 56px;">Wi-Fi最大输出功率: 20dBm</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>尺寸</h3>
-                                            <p>173（长）X131（宽）X35（高）mm（不含外置天线高度）</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>接口</h3>
-                                            <p>ANT×2（LTE MIMO）</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- end row -->
-                            <div class="row section-title">
-
-                            </div>
-                            <div class="row section-title">
-                                <a href="#" class="btn btn-primary">文档下载</a>
-                                <a href="#" class="btn btn-primary">视频下载</a>
-                            </div>
-
-                        </div> <!-- end container -->
-
-                    </section>
-                    <!-- end app-landing-features -->
-
-                </div>
-                <div class="tab-pane" role="tabpanel" id="featureT3">
-                    <!-- start app-landing-features -->
-                    <section class="app-landing-features section-padding">
-                        <div class="container">
-                            <div class="row section-title">
-                                <div class="col col-lg-8 col-lg-offset-2">
-                                    <h2>LTE专网模块</h2>
-                                    <p>HN1830 TD-SCDMA/TD-LTE双模家用基站，针对于覆盖和容量较弱的家庭覆盖场景，如公寓，别墅，老房子等，利用已有宽带连接，使用双模飞基站进行室内3G/4G信号的精确覆盖和容量提升。</p>
-                                </div>
-                            </div> <!-- end section-title -->
-
-                            <div class="row content">
-                                <div class="col col-md-4 left-col">
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>工作频段</h3>
-                                            <p>1.6MHz，同时支持1.4MHz载波压缩</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>容量</h3>
-                                            <p>支持32个并发数据或者VOLTE用户</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>性能</h3>
-                                            <p>最大输出功率: 100mW（双流） </p>
-                                        </div>
-                                    </div>
-                                </div> <!-- end col -->
-
-                                <div class="col col-md-4 col-md-offset-4 right-col">
-                                    <div class="feature">
-
-                                        <div class="details">
-                                            <h3>WIFI</h3>
-                                            <p style="height: 56px;">Wi-Fi最大输出功率: 20dBm</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>尺寸</h3>
-                                            <p>173（长）X131（宽）X35（高）mm（不含外置天线高度）</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>接口</h3>
-                                            <p>ANT×2（LTE MIMO）</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- end row -->
-                            <div class="row section-title">
-
-                            </div>
-                            <div class="row section-title">
-                                <a href="#" class="btn btn-primary">文档下载</a>
-                                <a href="#" class="btn btn-primary">视频下载</a>
-                            </div>
-
-                        </div> <!-- end container -->
-
-                    </section>
-                    <!-- end app-landing-features -->
-                </div>
-                <div class="tab-pane" role="tabpanel" id="featureT4">
-                    <!-- start app-landing-features -->
-                    <section class="app-landing-features section-padding">
-                        <div class="container">
-                            <div class="row section-title">
-                                <div class="col col-lg-8 col-lg-offset-2">
-                                    <h2>LTE网关与网管</h2>
-                                    <p>HN1830 TD-SCDMA/TD-LTE双模家用基站，针对于覆盖和容量较弱的家庭覆盖场景，如公寓，别墅，老房子等，利用已有宽带连接，使用双模飞基站进行室内3G/4G信号的精确覆盖和容量提升。</p>
-                                </div>
-                            </div> <!-- end section-title -->
-
-                            <div class="row content">
-                                <div class="col col-md-4 left-col">
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>工作频段</h3>
-                                            <p>1.6MHz，同时支持1.4MHz载波压缩</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>容量</h3>
-                                            <p>支持32个并发数据或者VOLTE用户</p>
-                                        </div>
-                                    </div>
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>性能</h3>
-                                            <p>最大输出功率: 100mW（双流） </p>
-                                        </div>
-                                    </div>
-                                </div> <!-- end col -->
-
-                                <div class="col col-md-4 col-md-offset-4 right-col">
-                                    <div class="feature">
-
-                                        <div class="details">
-                                            <h3>WIFI</h3>
-                                            <p style="height: 56px;">Wi-Fi最大输出功率: 20dBm</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>尺寸</h3>
-                                            <p>173（长）X131（宽）X35（高）mm（不含外置天线高度）</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="feature">
-                                        <div class="details">
-                                            <h3>接口</h3>
-                                            <p>ANT×2（LTE MIMO）</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- end row -->
-                            <div class="row section-title">
-
-                            </div>
-                            <div class="row section-title">
-                                <a href="#" class="btn btn-primary">文档下载</a>
-                                <a href="#" class="btn btn-primary">视频下载</a>
-                            </div>
-
-                        </div> <!-- end container -->
-
-                    </section>
-                    <!-- end app-landing-features -->
-                </div>
+		                        	<c:forEach items="${productKind.productList}" var="product" varStatus="statusProduct" >
+		                        		<div class="item container owl-slide">
+		                            	<div class="imgcl">
+		                            		<img src="../static/modules/cms/front/themes/gongjin/images/app-landing/1.jpg" />
+		                            	</div>
+		                                <div class="row section-title">
+		                                    <div class="col col-lg-8 col-lg-offset-2">
+		                                        <h2>${product.pd_name}</h2>
+		                                        <p>${product.pd_introduce}</p>
+		                                    </div>
+		                                </div> <!-- end section-title -->
+		
+		                                <div class="row content">
+		                                    <div class="col col-md-4 left-col">
+		                                        <div class="feature">
+		                                            <div class="details">
+		                                                <h3>${product.pd_title1}</h3>
+		                                                <p>${product.pd_intr1}</p>
+		                                            </div>
+		                                        </div>
+		                                        <div class="feature">
+		                                            <div class="details">
+		                                                <h3>${product.pd_title2}</h3>
+		                                                <p>${product.pd_intr2}</p>
+		                                            </div>
+		                                        </div>
+		                                        <div class="feature">
+		                                            <div class="details">
+		                                                <h3>${product.pd_title3}</h3>
+		                                                <p>${product.pd_intr3}</p>
+		                                            </div>
+		                                        </div>
+		                                    </div> <!-- end col -->
+		
+		                                    <div class="col col-md-4 col-md-offset-4 right-col">
+		                                        <div class="feature">
+		
+		                                            <div class="details">
+		                                                <h3>${product.pd_title4}</h3>
+		                                                <p>${product.pd_intr4}</p>
+		                                            </div>
+		                                        </div>
+		
+		                                        <div class="feature">
+		                                            <div class="details">
+		                                                <h3>${product.pd_title5}</h3>
+		                                                <p>${product.pd_intr5}</p>
+		                                            </div>
+		                                        </div>
+		
+		                                        <div class="feature">
+		                                            <div class="details">
+		                                                <h3>${product.pd_title6}</h3>
+		                                                <p>${product.pd_intr6}</p>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div> <!-- end row -->
+		                                <div class="row section-title">
+		
+		                                </div>
+		                                <div class="row section-title">
+		                                    <a href="#" class="btn btn-primary">文档下载</a>
+		                                    <a href="#" class="btn btn-primary">视频下载</a>
+		                                </div>
+		                            </div>
+		                            </c:forEach>
+		                            
+		                        </div>
+		                    </section>
+		
+		                </div>
+				   </c:when>  
+				   <c:otherwise>
+				   
+				   </c:otherwise>  
+				</c:choose>
+			</c:forEach>
+			
             </div>
         </div>
     </section>
@@ -436,6 +216,8 @@
     <footer class="row">
 		<%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
     </footer>
+	<script>
 
+	</script>
 </body>
 </html></html>

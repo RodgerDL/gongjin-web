@@ -36,10 +36,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="main_navigation">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">首页</a></li>
+                    <li><a href="/${site.theme}/web">首页</a></li>
                     <li><a href="features.html">产品及服务</a></li>
                     <li class="active"><a href="article.html">企业相关</a></li>
-                    <li><a href="recruitment.html">招聘信息</a></li>
+                    <li><a href="/${site.theme}/web/recruitment">招聘信息</a></li>
                     <li><a href="contact.html">联系我们</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-sm-8 single-blog">                    
                     <div class="blog row m0">
-                        <div class="row m0 image"><a href="articleDetail.html"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/posts/blog/1.jpg" alt=""></a></div>
+                        <div class="row m0 image"><a href="articleDetail.html"><img src="${article.bannerImage}" alt=""></a></div>
                         <ul class="blog_infos nav">
                             <li><a href="#"><i class="fa fa-calendar"></i><fmt:formatDate value="${article.updateDate}" pattern="yyyy.MM.dd"/></a></li>
                         </ul>

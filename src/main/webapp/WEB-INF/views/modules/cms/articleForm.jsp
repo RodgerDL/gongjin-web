@@ -74,6 +74,13 @@
 			</div>
 		</div>
 		<div class="control-group">
+            <label class="control-label">标题图:</label>
+            <div class="controls">
+                <input type="hidden" id="bannerImage" name="bannerImage" value="${article.bannerImageSrc}" />
+                <sys:ckfinder input="bannerImage" type="images" uploadPath="/cms/article" selectMultiple="false"/>
+            </div>
+        </div>
+		<div class="control-group">
 			<label class="control-label">正文:</label>
 			<div class="controls">
 				<form:textarea id="content" htmlEscape="true" path="articleData.content" rows="4" maxlength="200" class="input-xxlarge"/>
