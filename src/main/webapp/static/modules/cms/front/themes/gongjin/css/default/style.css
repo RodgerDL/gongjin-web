@@ -3347,7 +3347,7 @@ footer .copyright_line {
 }
 .home_slider .owl-controls {
   width: 100%;
-  position: absolute;
+  /*position: absolute;*/
   top: calc(50% - 47px);
 }
 .home_slider .owl-controls .owl-nav div {
@@ -3735,7 +3735,7 @@ footer .copyright_line {
 
 .app-landing-features .content:before {
   content: "";
-  background: url("../../images/app-landing/features-millde-pic.png") center center/100% no-repeat local;
+  /*background: url("../../images/app-landing/features-millde-pic.png") center center/100% no-repeat local;*/
   width: 350px;
   height: 369px;
   position: absolute;

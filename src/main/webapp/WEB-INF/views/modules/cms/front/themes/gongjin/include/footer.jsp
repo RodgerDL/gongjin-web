@@ -43,7 +43,7 @@
 <script src="${ctxStatic}/modules/cms/front/themes/gongjin/js/bootstrap.min.js"></script>
 
 <!--Owl Carousel-->
-<script src="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/owl.carousel/owl.carousel.min.js"></script>
+<script src="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/owl.carousel/owl.carousel.js"></script>
 
 <!--Waypoints-->
 <script src="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/waypoints/waypoints.min.js"></script>

@@ -13,18 +13,31 @@
         /*  Main Slider
         /*----------------------------------------------------*/
         $('.home_slider').owlCarousel({
-            loop:true,
-            margin:0,
-            nav:true,
-            autoplay:true,
-            dots: false,
-            navText: [
-              "<span class='lnr lnr-chevron-left'></span>",
-              "<span class='lnr lnr-chevron-right'></span>"
-              ],
-            items: 1,
-            autoplaySpeed: 1600,
-            navSpeed: 1600
+        	
+        	items: 1,
+            autoPlay: 3000,
+            stopOnHover : true,
+            
+            navigation: true,
+            navigationText: [
+                "<span class='lnr lnr-chevron-left'></span>",
+                "<span class='lnr lnr-chevron-right'></span>"
+                ]
+        	
+//            loop:true,
+//            margin:0,
+//            nav:true,
+//            autoplay:6000,
+//            dots: false,
+//            
+//            navigation:true,
+//            navigationText: [
+//              "<span class='lnr lnr-chevron-left'></span>",
+//              "<span class='lnr lnr-chevron-right'></span>"
+//              ],
+//            items: 1,
+//            autoplaySpeed: 1600,
+//            navSpeed: 1600
         });
 
         // $(window).trigger('resize');

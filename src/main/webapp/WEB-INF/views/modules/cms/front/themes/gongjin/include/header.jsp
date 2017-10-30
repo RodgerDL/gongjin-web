@@ -15,10 +15,14 @@
 
 <!-- Vendors -->
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/owl.carousel/owl.carousel.css">
+<link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/owl.carousel/owl.theme.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/simple-line-icons/css/simple-line-icons.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/css/font-awesome.min.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/lineariconsFree/style.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/css/magnific-popup.css">
+
+
+<script src="${ctxStatic}/jquery/jquery-1.8.3.min.js"></script>
 
 <!--Theme Styles-->
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/css/default/style.css">
