@@ -21,9 +21,9 @@
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 	}
-	
-	.showtop{
-		z-index: 100;
+		
+	body * {
+	  position: static;
 	}
 	</style>
 
@@ -124,7 +124,7 @@
 				<c:choose>  
 				   <c:when test="${product.size() > 1}">
 		                    <section class="row slider app-landing-features section-padding">
-		                        <div id="owldiv" class="owl-carousel home_slider">
+		                        <div id="owldiv" class="owl-carousel home_slider showtop">
 
 		                        	<c:forEach items="${productKind.productList}" var="product" varStatus="statusProduct" >
 		                        		<div class="item container owl-slide">
@@ -187,7 +187,7 @@
 		                                <div class="row section-title">
 		
 		                                </div>
-		                                <div class="row section-title showtop">
+		                                <div class="row section-title">
 		                                    <a href="#" class="btn btn-primary">文档下载</a>
                                             <div class="btn btn-primary"><a class="video" href="${product.pd_mv}">视频下载</a></div>
 		                                </div>
