@@ -8,29 +8,10 @@
     <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/header.jsp" %>
     
 	<style type="text/css">
-	.imgcl{
-		width: 350px;
-		height: 369px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		-webkit-transform: translate(-50%, -50%);
-		-moz-transform: translate(-50%, -50%);
-		-o-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-	}
+
 	
 	</style>
-	
-	<script type="text/javascript">
-		
-		function inita(){
 
-		}		
-		
-		
-	</script>
 </head>
 <body class="shortcode">
     
@@ -193,7 +174,7 @@
 		                                </div>
 		                                <div class="row section-title">
 		                                    <a href="#" class="btn btn-primary">文档下载</a>
-		                                    <a href="#" class="btn btn-primary">视频下载</a>
+                                            <div class="btn btn-primary"><a class="video" href="${product.pd_mv}">视频下载</a></div>
 		                                </div>
 		                            </div>
 		                            </c:forEach>
