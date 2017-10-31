@@ -25,6 +25,10 @@
 	body * {
 	  position: static;
 	}
+	
+	.showtop{
+	}
+	
 	</style>
 
 </head>
@@ -119,7 +123,7 @@
 		                        	<c:forEach items="${productKind.productList}" var="product" varStatus="statusProduct" >
 		                        		<div class="item container owl-slide">
 		                            	<div class="imgcl">
-		                            		<img src="../static/modules/cms/front/themes/gongjin/images/app-landing/1.jpg" />
+		                            		<img src="${product.pd_img}" />
 		                            	</div>
 		                                <div class="row section-title">
 		                                    <div class="col col-lg-8 col-lg-offset-2">
@@ -178,7 +182,7 @@
 		
 		                                </div>
 		                                <div class="row section-title">
-		                                    <a href="#" class="btn btn-primary">文档下载</a>
+		                                    <a href="${product.pd_introduce}" download="w3logo" class="btn btn-primary">文档下载</a>
                                             <div class="btn btn-primary"><a class="video" href="${product.pd_mv}">视频下载</a></div>
 		                                </div>
 		                            </div>
@@ -199,11 +203,21 @@
         </div>
     </section>
 
-    <footer class="row">
-		<%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
-    </footer>
+	<%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
 	<script>
-
+	    $(document).ready(function(){
+	        $('.showtop').owlCarousel({
+	        	items: 1,
+	            autoPlay: 3000,
+	            stopOnHover : true,
+	            
+	            navigation: true,
+	            navigationText: [
+	                "<span class='lnr lnr-chevron-left'></span>",
+	                "<span class='lnr lnr-chevron-right'></span>"
+	                ]
+	        });
+	    })(jQuery)
 	</script>
 </body>
 </html></html>
