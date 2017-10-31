@@ -61,6 +61,9 @@
             <div class="item">
                 <img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/slider/banner3.jpg" alt="">
             </div>
+            <div class="item">
+                <img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/slider/banner4.jpg" alt="">
+            </div>
         </div>
     </section>
 
