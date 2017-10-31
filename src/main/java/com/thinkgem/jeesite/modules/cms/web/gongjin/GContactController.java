@@ -40,12 +40,9 @@ public class GContactController {
         String categoryId = "6";
 
         Category category = categoryService.get(categoryId);
-        if (category==null){
-            Site site = CmsUtils.getSite(Site.defaultSiteId());
-            model.addAttribute("site", site);
-            return "error/404";
-        }
-        model.addAttribute("site", category.getSite());
+
+        Site site = CmsUtils.getSite(Site.defaultSiteId());
+        model.addAttribute("site", site);
 
         if ("contact".equals(category.getModule())) {
 

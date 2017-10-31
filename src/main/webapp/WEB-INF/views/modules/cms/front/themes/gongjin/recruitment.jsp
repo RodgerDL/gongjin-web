@@ -31,7 +31,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="/${site.theme}/web"><img src="images/logo.png" alt=""></a>
+                <a class="navbar-brand" href="/${site.theme}/web"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/logo.png" alt=""></a>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navigation" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -45,7 +45,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/${site.theme}/web">首页</a></li>
                     <li><a href="features.html">产品及服务</a></li>
-					<li><a href="firmInfo.html">企业相关</a></li>
+					<li><a href="firmInfo.jsp">企业相关</a></li>
                     <li class="active"><a href="/${site.theme}/web/recruitment">招聘信息</a></li>
                     <li><a href="contact.html">联系我们</a></li>
                 </ul>

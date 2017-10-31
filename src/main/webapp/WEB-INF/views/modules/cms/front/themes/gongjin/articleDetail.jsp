@@ -37,10 +37,10 @@
             <div class="collapse navbar-collapse" id="main_navigation">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/${site.theme}/web">首页</a></li>
-                    <li><a href="features.html">产品及服务</a></li>
-                    <li class="active"><a href="article.html">企业相关</a></li>
+                    <li><a href="/${site.theme}/web/product">产品及服务</a></li>
+                    <li class="active"><a href="/${site.theme}/web/firmInfo">企业相关</a></li>
                     <li><a href="/${site.theme}/web/recruitment">招聘信息</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="/${site.theme}/web/contact">联系我们</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
