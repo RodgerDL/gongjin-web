@@ -9,7 +9,22 @@
     
 	<style type="text/css">
 
-	
+	.imgcl{
+		width: 350px;
+		height: 369px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+		
+	body * {
+	  position: static;
+	}
 	</style>
 
 </head>
@@ -109,7 +124,7 @@
 				<c:choose>  
 				   <c:when test="${product.size() > 1}">
 		                    <section class="row slider app-landing-features section-padding">
-		                        <div id="owldiv" class="owl-carousel home_slider">
+		                        <div id="owldiv" class="owl-carousel home_slider showtop">
 
 		                        	<c:forEach items="${productKind.productList}" var="product" varStatus="statusProduct" >
 		                        		<div class="item container owl-slide">
