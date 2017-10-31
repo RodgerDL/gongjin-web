@@ -227,7 +227,7 @@
 	                "<span class='lnr lnr-chevron-right'></span>"
 	                ]
 	        });
-	    })(jQuery)
+	    })
 	</script>
 </body>
 </html></html>
