@@ -276,10 +276,10 @@
 								<div class="col-sm-4 team_member">
 									<div class="row m0 inner">
 										<div class="row m0 image"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/team/1.png" alt=""></div>
-										<h4 class="title">孙 宁</h4>
+										<h4 class="title">王 一</h4>
 										<h6 class="desig">项目经理 &amp; 技术支持</h6>
 										<p class="nState">1964年出生 硕士研究生学历 .</p>
-										<p class="hState">孙宁先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
+										<p class="hState">王先生先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
 										<ul class="list-unstyled">
 											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -291,10 +291,10 @@
 								<div class="col-sm-4 team_member">
 									<div class="row m0 inner">
 										<div class="row m0 image"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/team/6.png" alt=""></div>
-										<h4 class="title">孙 宁</h4>
+										<h4 class="title">王 二</h4>
 										<h6 class="desig">项目经理 &amp; 技术支持</h6>
 										<p class="nState">1964年出生 硕士研究生学历 .</p>
-										<p class="hState">孙宁先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
+										<p class="hState">王先生先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
 										<ul class="list-unstyled">
 											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -306,10 +306,10 @@
 								<div class="col-sm-4 team_member">
 									<div class="row m0 inner">
 										<div class="row m0 image"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/team/2.png" alt=""></div>
-										<h4 class="title">孙 宁</h4>
+										<h4 class="title">王 三</h4>
 										<h6 class="desig">项目经理 &amp; 技术支持</h6>
 										<p class="nState">1964年出生 硕士研究生学历 .</p>
-										<p class="hState">孙宁先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
+										<p class="hState">王先生先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
 										<ul class="list-unstyled">
 											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -321,10 +321,10 @@
 								<div class="col-sm-4 team_member">
 									<div class="row m0 inner">
 										<div class="row m0 image"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/team/3.png" alt=""></div>
-										<h4 class="title">孙 宁</h4>
+										<h4 class="title">王 四</h4>
 										<h6 class="desig">项目经理 &amp; 技术支持</h6>
 										<p class="nState">1964年出生 硕士研究生学历 .</p>
-										<p class="hState">孙宁先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
+										<p class="hState">王先生先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
 										<ul class="list-unstyled">
 											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -336,10 +336,10 @@
 								<div class="col-sm-4 team_member">
 									<div class="row m0 inner">
 										<div class="row m0 image"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/team/4.png" alt=""></div>
-										<h4 class="title">孙 宁</h4>
+										<h4 class="title">王 五</h4>
 										<h6 class="desig">项目经理 &amp; 技术支持</h6>
 										<p class="nState">1964年出生 硕士研究生学历 .</p>
-										<p class="hState">孙宁先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
+										<p class="hState">王先生先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
 										<ul class="list-unstyled">
 											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -351,10 +351,10 @@
 								<div class="col-sm-4 team_member">
 									<div class="row m0 inner">
 										<div class="row m0 image"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/team/5.png" alt=""></div>
-										<h4 class="title">孙 宁</h4>
+										<h4 class="title">王 六</h4>
 										<h6 class="desig">项目经理 &amp; 技术支持</h6>
 										<p class="nState">1964年出生 硕士研究生学历 .</p>
-										<p class="hState">孙宁先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
+										<p class="hState">王先生先生,1964年出生,硕士研究生学历。曾任摩托罗拉(中国)电子有限公司移动电话事业部高级测试工程师、测试部经理、天津工厂新产品引进项目经理,UT 斯达康中国有限公司高级副总裁、移动终端事业部全球总裁、董事、全球战略委员会成员,杭州启天科技有限公司总裁、董事。</p>
 										<ul class="list-unstyled">
 											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
