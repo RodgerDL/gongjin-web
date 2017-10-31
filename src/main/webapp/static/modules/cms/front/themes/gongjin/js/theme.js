@@ -22,7 +22,9 @@
             navigationText: [
                 "<span class='lnr lnr-chevron-left'></span>",
                 "<span class='lnr lnr-chevron-right'></span>"
-                ]
+                ],
+            autoplaySpeed: 1600,
+            navSpeed: 1600
         	
 //            loop:true,
 //            margin:0,
