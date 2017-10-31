@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.cms.dao.ContactDao">
+    
+	<sql id="contactColumns">
+		a.id AS "id",
+		a.contacts AS "contacts",
+		a.address AS "address",
+		a.phone AS "phone",
+		a.fax AS "fax",
+		a.mail AS "mail",
+		a.weixin AS "weixin",
+		a.qq AS "qq",
+		a.msn AS "msn",
+		a.facebook AS "facebook",
+		a.skype AS "skype",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag"
+	</sql>
+	
+	<sql id="contactJoins">
+	</sql>
+    
+	<select id="get" resultType="Contact">
+		SELECT 
+			<include refid="contactColumns"/>
+		FROM cms_contact a
+		<include refid="contactJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="Contact">
+		SELECT 
+			<include refid="contactColumns"/>
+		FROM cms_contact a
+		<include refid="contactJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="Contact">
+		SELECT 
+			<include refid="contactColumns"/>
+		FROM cms_contact a
+		<include refid="contactJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO cms_contact(
+			id,
+			contacts,
+			address,
+			phone,
+			fax,
+			mail,
+			weixin,
+			qq,
+			msn,
+			facebook,
+			skype,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag
+		) VALUES (
+			#{id},
+			#{contacts},
+			#{address},
+			#{phone},
+			#{fax},
+			#{mail},
+			#{weixin},
+			#{qq},
+			#{msn},
+			#{facebook},
+			#{skype},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE cms_contact SET 	
+			contacts = #{contacts},
+			address = #{address},
+			phone = #{phone},
+			fax = #{fax},
+			mail = #{mail},
+			weixin = #{weixin},
+			qq = #{qq},
+			msn = #{msn},
+			facebook = #{facebook},
+			skype = #{skype},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE cms_contact SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

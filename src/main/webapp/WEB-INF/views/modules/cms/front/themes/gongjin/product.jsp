@@ -9,7 +9,22 @@
     
 	<style type="text/css">
 
+	.imgcl{
+		width: 350px;
+		height: 369px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
 	
+	.showtop{
+		z-index: 100;
+	}
 	</style>
 
 </head>
@@ -172,7 +187,7 @@
 		                                <div class="row section-title">
 		
 		                                </div>
-		                                <div class="row section-title">
+		                                <div class="row section-title showtop">
 		                                    <a href="#" class="btn btn-primary">文档下载</a>
                                             <div class="btn btn-primary"><a class="video" href="${product.pd_mv}">视频下载</a></div>
 		                                </div>
