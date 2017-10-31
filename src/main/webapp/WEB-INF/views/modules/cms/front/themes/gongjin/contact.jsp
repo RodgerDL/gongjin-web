@@ -116,8 +116,6 @@
         </div>
     </section>
 
-     <footer class="row">
-		<%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
-    </footer>
+    <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
 
 </body></html>

@@ -12,35 +12,35 @@
         /*----------------------------------------------------*/
         /*  Main Slider
         /*----------------------------------------------------*/
-        $('.home_slider').owlCarousel({
-        	
-        	items: 1,
-            autoPlay: 3000,
-            stopOnHover : true,
-            
-            navigation: true,
-            navigationText: [
-                "<span class='lnr lnr-chevron-left'></span>",
-                "<span class='lnr lnr-chevron-right'></span>"
-                ],
-            autoplaySpeed: 1600,
-            navSpeed: 1600
-        	
-//            loop:true,
-//            margin:0,
-//            nav:true,
-//            autoplay:6000,
-//            dots: false,
+//        $('.home_slider').owlCarousel({
+//        	
+//        	items: 1,
+//            autoPlay: 3000,
+//            stopOnHover : true,
 //            
-//            navigation:true,
+//            navigation: true,
 //            navigationText: [
-//              "<span class='lnr lnr-chevron-left'></span>",
-//              "<span class='lnr lnr-chevron-right'></span>"
-//              ],
-//            items: 1,
+//                "<span class='lnr lnr-chevron-left'></span>",
+//                "<span class='lnr lnr-chevron-right'></span>"
+//                ],
 //            autoplaySpeed: 1600,
 //            navSpeed: 1600
-        });
+//        	
+////            loop:true,
+////            margin:0,
+////            nav:true,
+////            autoplay:6000,
+////            dots: false,
+////            
+////            navigation:true,
+////            navigationText: [
+////              "<span class='lnr lnr-chevron-left'></span>",
+////              "<span class='lnr lnr-chevron-right'></span>"
+////              ],
+////            items: 1,
+////            autoplaySpeed: 1600,
+////            navSpeed: 1600
+//        });
 
         // $(window).trigger('resize');
 
@@ -120,15 +120,9 @@
         /*  Testimonial Slider
         /*----------------------------------------------------*/        
         $('.testimonial_slider').owlCarousel({
-            loop:true,
-            margin:0,
-            nav:true,
-            navText: [
-              "<span class='lnr lnr-arrow-left'></span>",
-              "<span class='lnr lnr-arrow-right'></span>"
-              ],
-            autoplay:true,
-            items: 1
+        	items: 1,
+            autoPlay: 3000,
+            stopOnHover : true
         });      
         $('.testimonial_slider2').owlCarousel({
             loop:true,

@@ -135,6 +135,7 @@
                     <div class="row sectionTitle text-left">
                         <h3>公司动态</h3>
                     </div>
+                    
                     <div class="testimonial_slider owl-carousel">
                         <div class="item">
                             <div class="row slide m0">
@@ -143,18 +144,6 @@
                                     <div class="counter">01</div>
                                     <div class="row m0 quote">
                                         <p>企业文化 - 尊重人才，团队协作，拼搏进取。</p>
-                                    </div>
-                                    <h5 class="client_name">共进</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row slide slide2 m0">
-                                <div class="fleft client_img"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/testimonial/2.png" alt=""></div>
-                                <div class="fleft content">
-                                    <div class="counter">02</div>
-                                    <div class="row m0 quote">
-                                        <p>企业宗旨 - 发展企业，培养人才，回馈社会。</p>
                                     </div>
                                     <h5 class="client_name">共进</h5>
                                 </div>
@@ -186,6 +175,21 @@
     </section>
 
     <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
-
+    
+	<script>
+	    $(document).ready(function(){
+	        $('.home_slider').owlCarousel({
+	        	items: 1,
+	            autoPlay: 3000,
+	            stopOnHover : true
+	        });
+	        
+	        $('.testimonial_slider').owlCarousel({
+	        	items: 1,
+	            autoPlay: 3000,
+	            stopOnHover : true
+	        });
+	    })(jQuery)
+	</script>
 </body>
 </html>
