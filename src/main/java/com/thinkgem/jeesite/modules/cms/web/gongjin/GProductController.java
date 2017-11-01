@@ -45,6 +45,9 @@ public class GProductController extends BaseController{
 	@RequestMapping(value = "product")
 	public String product(Model model) {
 
+		Site site = CmsUtils.getSite(Site.defaultSiteId());
+		model.addAttribute("site", site);
+
 		model.addAttribute("product", gProductService.getProduct());
 //			// 如果没有子栏目，并父节点为跟节点的，栏目列表为当前栏目。
 //			List<Category> categoryList = Lists.newArrayList();
