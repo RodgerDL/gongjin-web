@@ -48,7 +48,7 @@
     </nav>
 
     <section class="row slider">
-        <div class="owl-carousel home_slider" style="margin-top:-10px">
+        <div class="owl-carousel home_slider owl-theme" style="margin-top:-10px">
             <div class="item">
                 <img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/slider/banner1.jpg" alt="">
             </div>

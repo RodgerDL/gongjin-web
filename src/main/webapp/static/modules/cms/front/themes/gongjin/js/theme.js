@@ -1,9 +1,8 @@
 (function($) {
     "use strict";
-    
-    
+
     $(document).ready(function(){
-        
+
         /*----------------------------------------------------*/
         /*  Preloader
         /*----------------------------------------------------*/
@@ -12,32 +11,29 @@
         /*----------------------------------------------------*/
         /*  Main Slider
         /*----------------------------------------------------*/
-        $('.home_slider').owlCarousel({
-        	
-        	items: 1,
-            autoPlay: 3000,
-            stopOnHover : true,
-            
-            navigation: true,
-            navigationText: [
-                "<span class='lnr lnr-chevron-left'></span>",
-                "<span class='lnr lnr-chevron-right'></span>"
-                ]
-        	
-//            loop:true,
-//            margin:0,
-//            nav:true,
-//            autoplay:6000,
-//            dots: false,
-//            
-//            navigation:true,
-//            navigationText: [
-//              "<span class='lnr lnr-chevron-left'></span>",
-//              "<span class='lnr lnr-chevron-right'></span>"
-//              ],
-//            items: 1,
-//            autoplaySpeed: 1600,
-//            navSpeed: 1600
+        function carouselInit() {
+            $('.home_slider').owlCarousel({
+                loop:true,
+                margin:0,
+                nav:false,
+                autoplay:true,
+                dots: true,
+                dotsEach: true,
+                navText: [
+                    "<span class='lnr lnr-chevron-left'></span>",
+                    "<span class='lnr lnr-chevron-right'></span>"
+                ],
+                items: 1,
+                autoplaySpeed: 1600,
+                navSpeed: 1600
+            });
+        }
+
+        carouselInit();
+
+        $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
+            e.preventDefault();
+            carouselInit();
         });
 
         // $(window).trigger('resize');
@@ -48,18 +44,18 @@
         // $('.domain_search_drop').on("click",function(){
         //     $(this).toggleClass('rotate')
         // });
-        
-		  /*----------------------------------------------------*/
+
+        /*----------------------------------------------------*/
         /*  Fix Navigation
         /*----------------------------------------------------*/
-		
-		$(".navbar-default").affix({
-        offset: {
-            top: $('.top_header').height()
-        	}
-    	});
-		
-        
+
+        $(".navbar-default").affix({
+            offset: {
+                top: $('.top_header').height()
+            }
+        });
+
+
         /*----------------------------------------------------*/
         /*  Project Slideshow
         /*----------------------------------------------------*/
@@ -70,9 +66,9 @@
             autoplay:true,
             navContainer: "#pricing_nav",
             navText: [
-              "<span class='lnr lnr-arrow-left'></span>",
-              "<span class='lnr lnr-arrow-right'></span>"
-              ],
+                "<span class='lnr lnr-arrow-left'></span>",
+                "<span class='lnr lnr-arrow-right'></span>"
+            ],
             responsiveClass:true,
             responsive:{
                 0:{
@@ -85,11 +81,10 @@
                 }
             }
         });
-        
-        
+
         /*----------------------------------------------------*/
         /*  Pricing Slider
-        /*----------------------------------------------------*/        
+        /*----------------------------------------------------*/
         $('.pricing_slider').owlCarousel({
             loop:true,
             margin:0,
@@ -112,31 +107,30 @@
                 }
             }
         });
-        
-        
+
         /*----------------------------------------------------*/
         /*  Testimonial Slider
-        /*----------------------------------------------------*/        
+        /*----------------------------------------------------*/
         $('.testimonial_slider').owlCarousel({
             loop:true,
             margin:0,
             nav:true,
             navText: [
-              "<span class='lnr lnr-arrow-left'></span>",
-              "<span class='lnr lnr-arrow-right'></span>"
-              ],
+                "<span class='lnr lnr-arrow-left'></span>",
+                "<span class='lnr lnr-arrow-right'></span>"
+            ],
             autoplay:true,
             items: 1
-        });      
+        });
         $('.testimonial_slider2').owlCarousel({
             loop:true,
             margin:0,
             nav:true,
             navText: [
-              "<span class='lnr lnr-arrow-left'></span>",
-              "<span class='lnr lnr-arrow-right'></span>"
-              ],
-            autoplay:true,            
+                "<span class='lnr lnr-arrow-left'></span>",
+                "<span class='lnr lnr-arrow-right'></span>"
+            ],
+            autoplay:true,
             responsive:{
                 0:{
                     items:1
@@ -146,7 +140,7 @@
                 }
             }
         });
-        
+
         /*----------------------------------------------------*/
         /*  Counter Up - Fun Facts
         /*----------------------------------------------------*/
@@ -154,7 +148,7 @@
             delay: 10,
             time: 1000
         });
-        
+
         /*----------------------------------------------------*/
         /*  Counter Up - Fun Facts
         /*----------------------------------------------------*/
@@ -164,7 +158,7 @@
             $this.css({
                 'transition' : 'width 2s'
             });
-            
+
             setTimeout(function() {
                 $this.waypoint(function(direction) {
                     if( direction === 'down' ) {
@@ -175,7 +169,7 @@
                 } , { offset: '100%' } )
             }, 500)
         });
-        
+
         /*----------------------------------------------------*/
         /*  PopUps
         /*----------------------------------------------------*/
@@ -183,6 +177,9 @@
             type: 'image'
         });
 
+        /*----------------------------------------------------*/
+        /*  Video
+        /*----------------------------------------------------*/
         $('.video').magnificPopup({
             type: 'iframe'
         });
@@ -196,8 +193,7 @@
                 return line_height + 'px'
             })
         })
-        
-    })
-    
-})(jQuery)
 
+    })
+
+})(jQuery)

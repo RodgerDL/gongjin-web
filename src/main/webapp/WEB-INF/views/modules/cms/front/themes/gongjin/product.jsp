@@ -127,8 +127,8 @@
 				</c:choose>
 				<c:choose>  
 				   <c:when test="${product.size() > 1}">
-		                    <section class="row slider app-landing-features section-padding">
-		                        <div id="owldiv" class="owl-carousel home_slider showtop">
+		                    <section class="row slider app-landing-features section-paddinlg">
+		                        <div id="owldiv" class="owl-carousel home_slider owl-theme">
 
 		                        	<c:forEach items="${productKind.productList}" var="product" varStatus="statusProduct" >
 		                        		<div class="item container owl-slide">
@@ -214,20 +214,6 @@
     </section>
 
 	<%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
-	<script>
-	    $(document).ready(function(){
-	        $('.showtop').owlCarousel({
-	        	items: 1,
-	            autoPlay: 3000,
-	            stopOnHover : true,
-	            
-	            navigation: true,
-	            navigationText: [
-	                "<span class='lnr lnr-chevron-left'></span>",
-	                "<span class='lnr lnr-chevron-right'></span>"
-	                ]
-	        });
-	    })
-	</script>
+
 </body>
 </html></html>
