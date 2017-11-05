@@ -15,7 +15,7 @@
 
 <!-- Vendors -->
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/owl.carousel/owl.carousel.css">
-<link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/owl.carousel/owl.theme.css">
+<link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/owl.carousel/owl.theme.default.min.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/simple-line-icons/css/simple-line-icons.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/css/font-awesome.min.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/vendors/lineariconsFree/style.css">
