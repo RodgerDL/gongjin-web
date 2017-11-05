@@ -38,7 +38,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="/${site.theme}/web"">首页</a></li>
                     <li><a href="/${site.theme}/web/product">产品及服务</a></li>
-                    <li><a href="/${site.theme}/web/firmInfo.html">企业相关</a></li>
+                    <li><a href="/${site.theme}/web/companyInfo">企业相关</a></li>
                     <li><a href="/${site.theme}/web/recruitment">招聘信息</a></li>
                     <li><a href="/${site.theme}/web/contact">联系我们</a></li>
                 </ul>

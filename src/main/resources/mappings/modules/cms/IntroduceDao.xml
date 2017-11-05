@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.cms.dao.IntroduceDao">
+    
+	<sql id="introduceColumns">
+		a.id AS "id",
+		a.detailed AS "detailed",
+		a.civilization AS "civilization",
+		a.civilization1 AS "civilization1",
+		a.civilization2 AS "civilization2",
+		a.civilization3 AS "civilization3",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag"
+	</sql>
+	
+	<sql id="introduceJoins">
+	</sql>
+    
+	<select id="get" resultType="Introduce">
+		SELECT 
+			<include refid="introduceColumns"/>
+		FROM cms_introduce a
+		<include refid="introduceJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="Introduce">
+		SELECT 
+			<include refid="introduceColumns"/>
+		FROM cms_introduce a
+		<include refid="introduceJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="Introduce">
+		SELECT 
+			<include refid="introduceColumns"/>
+		FROM cms_introduce a
+		<include refid="introduceJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO cms_introduce(
+			id,
+			detailed,
+			civilization,
+			civilization1,
+			civilization2,
+			civilization3,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag
+		) VALUES (
+			#{id},
+			#{detailed},
+			#{civilization},
+			#{civilization1},
+			#{civilization2},
+			#{civilization3},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE cms_introduce SET 	
+			detailed = #{detailed},
+			civilization = #{civilization},
+			civilization1 = #{civilization1},
+			civilization2 = #{civilization2},
+			civilization3 = #{civilization3},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE cms_introduce SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>
