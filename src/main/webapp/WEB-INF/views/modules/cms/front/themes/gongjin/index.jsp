@@ -175,21 +175,6 @@
     </section>
 
     <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/footer.jsp" %>
-    
-	<script>
-	    $(document).ready(function(){
-	        $('.home_slider').owlCarousel({
-	        	items: 1,
-	            autoPlay: 3000,
-	            stopOnHover : true
-	        });
-	        
-	        $('.testimonial_slider').owlCarousel({
-	        	items: 1,
-	            autoPlay: 3000,
-	            stopOnHover : true
-	        });
-	    })
-	</script>
+
 </body>
 </html>

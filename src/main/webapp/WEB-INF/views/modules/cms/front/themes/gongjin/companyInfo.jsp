@@ -90,7 +90,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-sm-5">
-									<img src="images/about-us/1.jpg" alt="" class="img-responsive">
+									<img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/company/1.jpg" alt="" class="img-responsive">
 								</div>
 								<div class="col-sm-7">
 									<div class="row sectionTitle text-left">
@@ -122,7 +122,7 @@
 								<c:forEach items="${companyInfo.technologyList}" var="technology" varStatus="statusTechnology" >
 									<div class="col-sm-4 cause2choose">
 										<div class="media">
-											<div class="media-left"><a href="#"><img src="${technology.icon}" alt=""></a></div>
+											<%--<div class="media-left"><a href="#"><img src="${technology.icon}" alt=""></a></div>--%>
 											<div class="media-body">
 												<h4>${technology.title}</h4>
 												<p>${technology.content}</p>
@@ -149,7 +149,7 @@
 											</ul>
 										</div>
 										<div class="col-sm-6 col-sm-offset-1">
-											<img src="images/service/tab/smile.jpg" alt="" class="service_img img-responsive fright">
+											<img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/company/2.jpg" alt="" class="service_img img-responsive fright">
 										</div>
 									</div>
 								</div>
@@ -228,7 +228,7 @@
 								</c:forEach>
 							</div>
 						</div>
-					</section>"src/main/webapp/WEB-INF/views/modules/cms/front/themes/gongjin/companyInfo.jsp"
+					</section>
 					
 					<section class="row blog_content">
 						<div class="row sectionTitle">
