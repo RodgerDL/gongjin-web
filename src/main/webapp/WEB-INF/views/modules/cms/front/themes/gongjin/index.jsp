@@ -19,8 +19,8 @@
                 <div class="col-sm-6 wc_msg">欢迎访问共进</div>
                 <div class="col-sm-6">
                     <ul class="nav nav-pills">
-                        <li><a href="tel:12345612348"><i class="icon-call-out"></i>123 - 456 - 12348</a></li>
-                        <li><a href="mailto:info@hostpress.com"><i class="icon-envelope"></i>info@example.com</a></li>
+                        <li><a href="tel:12345612348"><i class="icon-call-out"></i>${site.tel}</a></li>
+                        <li><a href="mailto:info@hostpress.com"><i class="icon-envelope"></i>${site.email}</a></li>
                     </ul>
                 </div>
             </div>

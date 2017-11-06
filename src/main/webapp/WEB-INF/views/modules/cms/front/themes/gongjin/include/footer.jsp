@@ -5,8 +5,8 @@
         <div class="container">
             <div class="row m0 quick_contact">
                 <ul class="nav nav-pills">
-                    <li><a href="tel:1234567890"><i class="lnr lnr-phone"></i>123 - 456 - 7890</a></li>
-                    <li><a href="mailto:info@hostpress.com"><i class="lnr lnr-envelope"></i>info@exmaple.com</a></li>
+                    <li><a href="tel:${site.tel}"><i class="lnr lnr-phone"></i>${site.tel}</a></li>
+                    <li><a href="mailto:${site.email}"><i class="lnr lnr-envelope"></i>${site.email}</a></li>
                     <li><a href="#"><i class="lnr lnr-bubble"></i>联系我们</a></li>
                 </ul>
             </div>
