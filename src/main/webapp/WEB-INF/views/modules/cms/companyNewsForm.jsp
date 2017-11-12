@@ -54,10 +54,7 @@
 		<div class="control-group">
 			<label class="control-label">时间：</label>
 			<div class="controls">
-				<input name="newsDate" type="text" readonly="readonly" maxlength="20" class="input-medium Wdate "
-					value="<fmt:formatDate value="${companyNews.newsDate}" pattern="yyyy-MM-dd HH:mm:ss"/>"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
-			</div>
+				<form:input path="newsDate" htmlEscape="false" maxlength="64" class="input-xlarge "/>
 		</div>
 		<div class="control-group">
 			<label class="control-label">图片：</label>
