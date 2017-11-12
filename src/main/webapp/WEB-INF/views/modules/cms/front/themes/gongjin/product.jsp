@@ -44,8 +44,8 @@
                 <div class="col-sm-6 wc_msg">欢迎访问共进</div>
                 <div class="col-sm-6">
                     <ul class="nav nav-pills">
-                        <li><a href="tel:12345612348"><i class="icon-call-out"></i>123 - 456 - 12348</a></li>
-                        <li><a href="mailto:info@hostpress.com"><i class="icon-envelope"></i>info@example.com</a></li>
+						<li><a href="tel:12345612348"><i class="icon-call-out"></i>${site.tel}</a></li>
+						<li><a href="mailto:info@hostpress.com"><i class="icon-envelope"></i>${site.email}</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,27 +55,17 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+                    <a class="navbar-brand" href="/${site.theme}/web"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/logo.png" alt=""></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="main_navigation">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">首页</a></li>
-                        <li class="active"><a href="features.html">产品及服务</a></li>
-                        <li class="dropdown">
-                            <a href="article.html">企业相关</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="culture.html">企业文化</a>
-                                </li>
-                                <li>
-                                    <a href="article.html">企业新闻</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="recruitment.html">招聘信息</a></li>
-                        <li><a href="contact.html">联系我们</a></li>
+						<li><a href="/${site.theme}/web"">首页</a></li>
+						<li class="active"><a href="/${site.theme}/web/product">产品及服务</a></li>
+						<li><a href="/${site.theme}/web/companyInfo">企业相关</a></li>
+						<li><a href="/${site.theme}/web/recruitment">招聘信息</a></li>
+						<li><a href="/${site.theme}/web/contact">联系我们</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -192,7 +182,7 @@
 		
 		                                </div>
 		                                <div class="row section-title">
-		                                    <a href="${product.pd_introduce}" download="w3logo" class="btn btn-primary">文档下载</a>
+		                                    <a href="${product.pd_file}" class="btn btn-primary">文档下载</a>
                                             <div class="btn btn-primary"><a class="video" href="${product.pd_mv}">视频下载</a></div>
 		                                </div>
 		                            </div>

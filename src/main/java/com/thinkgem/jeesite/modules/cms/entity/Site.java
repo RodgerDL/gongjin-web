@@ -26,6 +26,8 @@ public class Site extends DataEntity<Site> {
 	private String copyright;// 版权信息
 	private String customIndexView;// 自定义首页视图文件
 	private String domain;
+	private String tel; //电话
+	private String email; //邮箱
 
 	public Site() {
 		super();
@@ -95,6 +97,22 @@ public class Site extends DataEntity<Site> {
 
 	public void setCopyright(String copyright) {
 		this.copyright = copyright;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getCustomIndexView() {

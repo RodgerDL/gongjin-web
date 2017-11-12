@@ -67,11 +67,15 @@
 			</div>
 		</div>
 		<div class="control-group">
-			<label class="control-label">默认主题:</label>
+			<label class="control-label">电话:</label>
 			<div class="controls">
-				<form:select path="theme" class="input-medium">
-					<form:options items="${fns:getDictList('cms_theme')}" itemLabel="label" itemValue="value" htmlEscape="false"/>
-				</form:select>
+				<form:input path="tel" htmlEscape="false" maxlength="200"/>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">邮箱:</label>
+			<div class="controls">
+				<form:input path="email" htmlEscape="false" maxlength="200"/>
 			</div>
 		</div>
 		<div class="control-group">

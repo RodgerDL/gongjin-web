@@ -43,7 +43,7 @@ import com.thinkgem.jeesite.modules.cms.utils.CmsUtils;
  * @version 2013-5-29
  */
 @Controller
-@RequestMapping(value = "${frontPath}")
+//@RequestMapping(value = "${frontPath}")
 public class FrontController extends BaseController{
 	
 //	@Autowired
