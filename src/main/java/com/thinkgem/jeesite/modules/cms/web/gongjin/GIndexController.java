@@ -3,19 +3,29 @@
  */
 package com.thinkgem.jeesite.modules.cms.web.gongjin;
 
-import com.thinkgem.jeesite.common.web.BaseController;
-import com.thinkgem.jeesite.modules.cms.service.*;
-import com.thinkgem.jeesite.modules.cms.utils.CmsUtils;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import com.thinkgem.jeesite.modules.cms.entity.Article;
-import com.thinkgem.jeesite.modules.cms.entity.Category;
-import com.thinkgem.jeesite.modules.cms.entity.Site;
-import com.thinkgem.jeesite.common.persistence.Page;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.thinkgem.jeesite.common.persistence.Page;
+import com.thinkgem.jeesite.common.web.BaseController;
+import com.thinkgem.jeesite.modules.cms.entity.Article;
+import com.thinkgem.jeesite.modules.cms.entity.Category;
+import com.thinkgem.jeesite.modules.cms.entity.CompanyNews;
+import com.thinkgem.jeesite.modules.cms.entity.CompanySynopsis;
+import com.thinkgem.jeesite.modules.cms.entity.Site;
+import com.thinkgem.jeesite.modules.cms.service.ArticleDataService;
+import com.thinkgem.jeesite.modules.cms.service.ArticleService;
+import com.thinkgem.jeesite.modules.cms.service.CategoryService;
+import com.thinkgem.jeesite.modules.cms.service.SiteService;
 import com.thinkgem.jeesite.modules.cms.service.gongjin.GArticleService;
+import com.thinkgem.jeesite.modules.cms.service.gongjin.GCompanyNewsService;
+import com.thinkgem.jeesite.modules.cms.service.gongjin.GCompanySynopsisService;
+import com.thinkgem.jeesite.modules.cms.utils.CmsUtils;
 
 /**
  * 网站首页Controller
@@ -36,6 +46,10 @@ public class GIndexController extends BaseController{
 	private CategoryService categoryService;
 	@Autowired
 	private SiteService siteService;
+	@Autowired
+	private GCompanyNewsService companyNewsService;
+	@Autowired
+	private GCompanySynopsisService companySynopsisService;
 
 	/**
 	 * 网站首页
@@ -62,6 +76,15 @@ public class GIndexController extends BaseController{
 			//System.out.println(page.getPageNo());
 			page = gArticleService.findPage(page, new Article(category), false);
 			model.addAttribute("page", page);
+			
+			List<CompanyNews> companyNewsList = new ArrayList<CompanyNews>();
+			companyNewsList = companyNewsService.getCompanyNews();
+			model.addAttribute("companyNews", companyNewsList);
+			
+			List<CompanySynopsis> companySynopsisList = new ArrayList<CompanySynopsis>();
+			companySynopsisList = companySynopsisService.getCompanySynopsis();
+			model.addAttribute("companySynopsis", companySynopsisList);
+			
 		}
 
 		return "modules/cms/front/themes/gongjin/index";

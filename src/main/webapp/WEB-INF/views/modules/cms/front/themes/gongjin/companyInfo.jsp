@@ -228,7 +228,7 @@
 								</c:forEach>
 							</div>
 						</div>
-					</section>"src/main/webapp/WEB-INF/views/modules/cms/front/themes/gongjin/companyInfo.jsp"
+					</section>
 					
 					<section class="row blog_content">
 						<div class="row sectionTitle">

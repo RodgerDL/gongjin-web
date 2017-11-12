@@ -70,60 +70,17 @@
                 <h2>公司简介</h2>
             </div>
             <div class="row">
-                <div class="col-sm-4 cause2choose">
-                    <div class="media">
-                        <div class="media-left"><a href="#"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/icons/cause2choose/1.png" alt=""></a></div>
-                        <div class="media-body">
-                            <h4>共进</h4>
-                            <p>深圳市共进电子股份有限公司自1998年创始，以 “发展企业，培养人才，回馈社会”为宗旨，拥有“T&W”商标。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 cause2choose">
-                    <div class="media">
-                        <div class="media-left"><a href="#"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/icons/cause2choose/2.png" alt=""></a></div>
-                        <div class="media-body">
-                            <h4>管理</h4>
-                            <p>公司历年来追求管理与国际接轨，现已通过和导入质量、环境、职业健康安全和社会责任等一系列管理体系。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 cause2choose">
-                    <div class="media">
-                        <div class="media-left"><a href="#"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/icons/cause2choose/3.png" alt=""></a></div>
-                        <div class="media-body">
-                            <h4>产品及服务</h4>
-                            <p>LTE飞基站/LTE皮基站/LTE室内型双载波皮基站LTE室外型双载波皮基站</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 cause2choose">
-                    <div class="media">
-                        <div class="media-left"><a href="#"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/icons/cause2choose/4.png" alt=""></a></div>
-                        <div class="media-body">
-                            <h4>社会责任</h4>
-                            <p>从生态设计、温室气体管理、供应链管理、CSR等方面执行可持续性发展，贯穿于产品全生命周期</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 cause2choose">
-                    <div class="media">
-                        <div class="media-left"><a href="#"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/icons/cause2choose/5.png" alt=""></a></div>
-                        <div class="media-body">
-                            <h4>技术</h4>
-                            <p>新兴的Small Cell技术既可以做到精确的覆盖，又可以最大限度的满足客户的无线资源需求，提升容量。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 cause2choose">
-                    <div class="media">
-                        <div class="media-left"><a href="#"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/icons/cause2choose/6.png" alt=""></a></div>
-                        <div class="media-body">
-                            <h4>加入共进</h4>
-                            <p>共进强调员工在企业中发展空间大，共进助员工梦想照进现实，选择共进，选择未来！</p>
-                        </div>
-                    </div>
-                </div>
+            	<c:forEach items="${companySynopsis}" var="companySynopsis" varStatus="statusCompanySynopsis" >
+	            	<div class="col-sm-4 cause2choose">
+	                    <div class="media">
+	                        <div class="media-left"><a href="#"><img src="${companySynopsis.icon}" alt=""></a></div>
+	                        <div class="media-body">
+	                            <h4>${companySynopsis.title}</h4>
+	                            <p>${companySynopsis.content}</p>
+	                        </div>
+	                    </div>
+	                </div>
+            	</c:forEach>
             </div>
         </div>
     </section>
@@ -137,18 +94,20 @@
                     </div>
                     
                     <div class="testimonial_slider owl-carousel">
-                        <div class="item">
-                            <div class="row slide m0">
-                                <div class="fleft client_img"><img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/testimonial/1.png" alt=""></div>
-                                <div class="fleft content">
-                                    <div class="counter">01</div>
-                                    <div class="row m0 quote">
-                                        <p>企业文化 - 尊重人才，团队协作，拼搏进取。</p>
-                                    </div>
-                                    <h5 class="client_name">共进</h5>
-                                </div>
-                            </div>
-                        </div>
+	                    <c:forEach items="${companyNews}" var="companyNews" varStatus="statusCompanyNews" >
+	                        <div class="item">
+	                            <div class="row slide m0">
+	                                <div class="fleft client_img"><img src="${companyNews.img}" alt=""></div>
+	                                <div class="fleft content">
+	                                    <div class="counter">${companyNews.newsNumber}</div>
+	                                    <div class="row m0 quote">
+	                                        <p>${companyNews.content}</p>
+	                                    </div>
+	                                    <h5 class="client_name">${companyNews.newsDate}</h5>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </c:forEach>
                     </div>
                 </div>
                 <div class="col-sm-6">
