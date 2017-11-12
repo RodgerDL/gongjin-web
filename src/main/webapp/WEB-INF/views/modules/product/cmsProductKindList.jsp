@@ -21,14 +21,6 @@
 		<li class="active"><a href="${ctx}/product/cmsProductKind/">产品管理列表</a></li>
 		<shiro:hasPermission name="product:cmsProductKind:edit"><li><a href="${ctx}/product/cmsProductKind/form">产品管理添加</a></li></shiro:hasPermission>
 	</ul>
-	<form:form id="searchForm" modelAttribute="cmsProductKind" action="${ctx}/product/cmsProductKind/" method="post" class="breadcrumb form-search">
-		<input id="pageNo" name="pageNo" type="hidden" value="${page.pageNo}"/>
-		<input id="pageSize" name="pageSize" type="hidden" value="${page.pageSize}"/>
-		<ul class="ul-form">
-			<li class="btns"><input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/></li>
-			<li class="clearfix"></li>
-		</ul>
-	</form:form>
 	<sys:message content="${message}"/>
 	<table id="contentTable" class="table table-striped table-bordered table-condensed">
 		<thead>

@@ -21,14 +21,6 @@
 		<li class="active"><a href="${ctx}/cms/partner/">合作伙伴列表</a></li>
 		<shiro:hasPermission name="cms:article:edit"><li><a href="${ctx}/cms/partner/form">合作伙伴添加</a></li></shiro:hasPermission>
 	</ul>
-	<form:form id="searchForm" modelAttribute="partner" action="${ctx}/cms/partner/" method="post" class="breadcrumb form-search">
-		<input id="pageNo" name="pageNo" type="hidden" value="${page.pageNo}"/>
-		<input id="pageSize" name="pageSize" type="hidden" value="${page.pageSize}"/>
-		<ul class="ul-form">
-			<li class="btns"><input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/></li>
-			<li class="clearfix"></li>
-		</ul>
-	</form:form>
 	<sys:message content="${message}"/>
 	<table id="contentTable" class="table table-striped table-bordered table-condensed">
 		<thead>
