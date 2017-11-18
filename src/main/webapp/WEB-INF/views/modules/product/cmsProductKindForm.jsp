@@ -146,6 +146,8 @@
 							<td>
 								<input id="cmsProductList{{idx}}_pdImg" name="cmsProductList[{{idx}}].pdImg" type="hidden" value="{{row.pdImg}}" maxlength="255"/>
 								<sys:ckfinder input="cmsProductList{{idx}}_pdImg" type="files" uploadPath="/product/cmsProductKind" selectMultiple="false"/>
+								<span class="help-inline">建议图片大小：256 × 256（像素）</span>
+
 							</td>
 							<td>
 								<input id="cmsProductList{{idx}}_pdFile" name="cmsProductList[{{idx}}].pdFile" type="hidden" value="{{row.pdFile}}" maxlength="255"/>

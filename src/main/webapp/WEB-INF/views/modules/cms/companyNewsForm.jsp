@@ -61,6 +61,7 @@
 			<div class="controls">
 				<form:hidden id="img" path="img" htmlEscape="false" maxlength="225" class="input-xlarge"/>
 				<sys:ckfinder input="img" type="files" uploadPath="/cms/companyNews" selectMultiple="false"/>
+				<span class="help-inline">建议图片大小：262 × 335（像素）</span>
 			</div>
 		</div>
 		<div class="control-group">
