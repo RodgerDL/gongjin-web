@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>${site.title} - 企业新闻</title>
+	<title>${site.title} - 公司新闻</title>
     <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/header.jsp" %>
 </head>
 <body class="shortcode">
@@ -48,10 +48,10 @@
     
     <section class="row page_header">
         <div class="container">
-            <h3>企业新闻</h3>
+            <h3>公司新闻</h3>
             <ol class="breadcrumb">
                 <li><a href="/${site.theme}/web"">首页</a></li>
-                <li class="active">企业新闻</li>
+                <li class="active">公司新闻</li>
             </ol>
         </div>
     </section>

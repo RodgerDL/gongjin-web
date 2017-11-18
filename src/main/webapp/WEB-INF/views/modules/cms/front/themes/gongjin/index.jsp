@@ -90,7 +90,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="row sectionTitle text-left">
-                        <h3>公司动态</h3>
+                        <h3>行业动态</h3>
                     </div>
                     
                     <div class="testimonial_slider owl-carousel">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="row sectionTitle text-left">
-                        <h3>行业信息</h3>
+                        <h3>公司新闻</h3>
                     </div>
                     <div class="latest_news row m0">
                         <c:forEach items="${page.list}" var="article">

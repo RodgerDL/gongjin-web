@@ -94,8 +94,8 @@
                     <div class="media">
                         <div class="media-left"><i class="fa fa-phone"></i></div>
                         <div class="media-body media-middle">
-                            ${result[0].phone} <br>
-                            ${result[0].fax}
+                            电话：${result[0].phone} <br>
+                            传真：${result[0].fax}
                         </div>
                     </div>
                     <div class="media">

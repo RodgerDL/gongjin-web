@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>${site.title} - 企业新闻</title>
+	<title>${site.title} - 公司新闻</title>
     <%@include file="/WEB-INF/views/modules/cms/front/themes/gongjin/include/header.jsp" %>
 
 </head>
