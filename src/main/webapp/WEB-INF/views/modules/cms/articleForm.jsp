@@ -71,7 +71,7 @@
 			<div class="controls">
                 <input type="hidden" id="image" name="image" value="${article.imageSrc}" />
 				<sys:ckfinder input="image" type="thumb" uploadPath="/cms/article" selectMultiple="false"/>
-				<span class="help-inline">建议图片大小：750 × 300（像素）</span>
+				<span class="help-inline">建议图片大小：112 × 74（像素）</span>
 			</div>
 		</div>
 		<div class="control-group">
@@ -79,7 +79,7 @@
             <div class="controls">
                 <input type="hidden" id="bannerImage" name="bannerImage" value="${article.bannerImageSrc}" />
                 <sys:ckfinder input="bannerImage" type="images" uploadPath="/cms/article" selectMultiple="false"/>
-				<span class="help-inline">建议图片大小：112 × 74（像素）</span>
+				<span class="help-inline">建议图片大小：750 × 300（像素）</span>
             </div>
         </div>
 		<div class="control-group">

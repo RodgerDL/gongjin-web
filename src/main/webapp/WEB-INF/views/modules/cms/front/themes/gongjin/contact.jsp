@@ -102,12 +102,6 @@
                         <div class="media-left"><i class="fa fa-comments-o"></i></div>
                         <div class="media-body media-middle">
                             <a href="mailto:info@hostpress.com">${result[0].mail}</a>
-                            <ul class="nav nav-pills">
-                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href=""><i class="fa fa-youtube"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

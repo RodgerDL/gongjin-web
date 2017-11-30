@@ -195,12 +195,6 @@
 											<h6 class="desig">${member.position}</h6>
 											<p class="nState">${member.introduction}</p>
 											<p class="hState">${member.details}</p>
-											<ul class="list-unstyled">
-												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-												<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-												<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-											</ul>
 										</div>
 									</div>
 								</c:forEach>

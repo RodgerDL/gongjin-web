@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-sm-4 sidebar">
                     <div class="row m0 inner">
-                        <div class="row m0 recent_posts">
+                        <div class="row m0 recent_posts latest_news">
                             <h4>最新文章</h4>
                             <c:forEach items="${page.list}" var="article">
                                 <div class="post media">
