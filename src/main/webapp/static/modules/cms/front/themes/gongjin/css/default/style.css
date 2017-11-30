@@ -3857,7 +3857,7 @@ footer .copyright_line {
   font-size: 36px !important;
   font-size: 2.25rem;
   font-weight: 200;
-  margin: 0 0 1em;
+  margin: 1em 0 1em;
   padding-bottom: 10px;
   position: relative;
 }
