@@ -919,7 +919,8 @@ footer .top_footer .shortKnowledge h4 {
   font-family: '微软雅黑', sans-serif;
 }
 footer .top_footer .shortKnowledge p {
-  color: #595f7c;
+  /*color: #595f7c;*/
+  color: #d7d7d7;
   line-height: 28px;
 }
 footer .top_footer .shortKnowledge .product h4 {
@@ -939,7 +940,8 @@ footer .top_footer .shortKnowledge .product .product_list li a {
   line-height: 20px;
   font-family: '微软雅黑', sans-serif;
   float: left;
-  color: #595f7c;
+  /*color: #595f7c;*/
+  color: #d7d7d7;
   padding: 0;
 }
 footer .top_footer .shortKnowledge .product .product_list li a:before {
@@ -1114,6 +1116,9 @@ footer .copyright_line {
   font-weight: 300;
   letter-spacing: 1px;
   font-size: 13px;
+}
+footer .copyright_line p{
+  color: #fff;
 }
 /*----------------------------------------------------------------*/
 .serviceTab .service_tab_menu {
