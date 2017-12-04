@@ -122,7 +122,7 @@
 
 		                        	<c:forEach items="${productKind.productList}" var="product" varStatus="statusProduct" >
 		                        		<div class="item container owl-slide">
-		                            	<div class="imgcl">
+		                            	<div class="imgcl" style="line-height:369px;">
 		                            		<img src="${product.pd_img}" />
 		                            	</div>
 		                                <div class="row section-title">
