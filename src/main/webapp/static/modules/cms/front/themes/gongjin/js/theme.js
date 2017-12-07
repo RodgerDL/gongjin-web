@@ -24,6 +24,7 @@
                     "<span class='lnr lnr-chevron-right'></span>"
                 ],
                 items: 1,
+                autoplayHoverPause:true,
                 autoplaySpeed: 1600,
                 navSpeed: 1600
             });
