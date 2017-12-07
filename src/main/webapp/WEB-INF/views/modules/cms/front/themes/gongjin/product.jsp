@@ -21,14 +21,7 @@
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 	}
-		
-	body * {
-	  position: static;
-	}
-	
-	.showtop{
-	}
-	
+
 	</style>
 
 </head>

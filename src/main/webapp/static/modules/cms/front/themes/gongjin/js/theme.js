@@ -58,88 +58,21 @@
 
 
         /*----------------------------------------------------*/
-        /*  Project Slideshow
-        /*----------------------------------------------------*/
-        $('.pricing_plan').owlCarousel({
-            loop:true,
-            margin:0,
-            nav:true,
-            autoplay:true,
-            navContainer: "#pricing_nav",
-            navText: [
-                "<span class='lnr lnr-arrow-left'></span>",
-                "<span class='lnr lnr-arrow-right'></span>"
-            ],
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    center: true
-                },
-                992:{
-                    items:3,
-                    center: true
-                }
-            }
-        });
-
-        /*----------------------------------------------------*/
-        /*  Pricing Slider
-        /*----------------------------------------------------*/
-        $('.pricing_slider').owlCarousel({
-            loop:true,
-            margin:0,
-            nav:false,
-            dots: true,
-            autoplay:true,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                700:{
-                    items:2
-                },
-                992:{
-                    items:3
-                },
-                1501:{
-                    items:4
-                }
-            }
-        });
-
-        /*----------------------------------------------------*/
         /*  Testimonial Slider
         /*----------------------------------------------------*/
         $('.testimonial_slider').owlCarousel({
             loop:true,
             margin:0,
-            nav:true,
-            navText: [
-                "<span class='lnr lnr-arrow-left'></span>",
-                "<span class='lnr lnr-arrow-right'></span>"
-            ],
+            nav:false,
             autoplay:true,
-            items: 1
-        });
-        $('.testimonial_slider2').owlCarousel({
-            loop:true,
-            margin:0,
-            nav:true,
+            dots: false,
             navText: [
-                "<span class='lnr lnr-arrow-left'></span>",
-                "<span class='lnr lnr-arrow-right'></span>"
+                "<span class='lnr lnr-chevron-left'></span>",
+                "<span class='lnr lnr-chevron-right'></span>"
             ],
-            autoplay:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                800:{
-                    items:2
-                }
-            }
+            items: 1,
+            autoplaySpeed: 1600,
+            navSpeed: 1600
         });
 
         /*----------------------------------------------------*/
