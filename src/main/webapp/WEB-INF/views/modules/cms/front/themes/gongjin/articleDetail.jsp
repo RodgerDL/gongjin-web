@@ -61,7 +61,9 @@
             <div class="row">
                 <div class="col-sm-8 single-blog">                    
                     <div class="blog row m0">
-                        <div class="row m0 image"><a href="articleDetail.html"><img src="${article.bannerImage}" alt=""></a></div>
+                        <c:if test="${article.bannerImage}">
+                            <div class="row m0 image"><a href="articleDetail.html"><img src="${article.bannerImage}" alt=""></a></div>
+                        </c:if>
                         <ul class="blog_infos nav">
                             <li><a href="#"><i class="fa fa-calendar"></i><fmt:formatDate value="${article.updateDate}" pattern="yyyy.MM.dd"/></a></li>
                         </ul>
@@ -82,7 +84,7 @@
                 </div>
                 <div class="col-sm-4 sidebar">
                     <div class="row m0 inner">
-                        <div class="row m0 recent_posts">
+                        <div class="row m0 recent_posts latest_news">
                             <h4>最新文章</h4>
                             <c:forEach items="${page.list}" var="article">
                                 <div class="post media">

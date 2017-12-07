@@ -6,6 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
+<link rel="shortcut icon" href="${ctxStatic}/favicon.ico" type="image/x-icon" />
 <!--Bootstrap-->
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/css/bootstrap.min.css">
 <link rel="stylesheet" href="${ctxStatic}/modules/cms/front/themes/gongjin/css/bootstrap-theme.min.css">

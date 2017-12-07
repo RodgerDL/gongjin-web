@@ -90,7 +90,7 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-sm-5">
-									<img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/company/1.jpg" alt="" class="img-responsive">
+									<img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/company/4.jpg" alt="" class="img-responsive">
 								</div>
 								<div class="col-sm-7">
 									<div class="row sectionTitle text-left">
@@ -149,7 +149,7 @@
 											</ul>
 										</div>
 										<div class="col-sm-6 col-sm-offset-1">
-											<img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/company/2.jpg" alt="" class="service_img img-responsive fright">
+											<img src="${ctxStatic}/modules/cms/front/themes/gongjin/images/company/3.jpg" alt="" class="service_img img-responsive fright">
 										</div>
 									</div>
 								</div>
@@ -195,12 +195,6 @@
 											<h6 class="desig">${member.position}</h6>
 											<p class="nState">${member.introduction}</p>
 											<p class="hState">${member.details}</p>
-											<ul class="list-unstyled">
-												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-												<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-												<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-											</ul>
 										</div>
 									</div>
 								</c:forEach>
