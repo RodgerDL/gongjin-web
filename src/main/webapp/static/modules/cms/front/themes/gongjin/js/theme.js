@@ -3,6 +3,27 @@
 
     $(document).ready(function(){
 
+        function IEVersion() {
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isOpera = userAgent.indexOf("Opera") > -1;
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+            var isEdge = userAgent.indexOf("Windows NT 6.1; Trident/7.0;") > -1 && !isIE; //判断是否IE的Edge浏览器
+            if (isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                return fIEVersion;
+            } else {
+                return -1;//非IE
+            }
+        };
+
+        var IEVer = IEVersion();
+
+        if (IEVer != -1 && IEVer <= 8) {
+            alert("请使用IE8以上版本，感受最佳浏览体验！");
+        };
+
         /*----------------------------------------------------*/
         /*  Preloader
         /*----------------------------------------------------*/
@@ -11,30 +32,20 @@
         /*----------------------------------------------------*/
         /*  Main Slider
         /*----------------------------------------------------*/
-        function carouselInit() {
-            $('.home_slider').owlCarousel({
-                loop:true,
-                margin:0,
-                nav:false,
-                autoplay:true,
-                dots: true,
-                dotsEach: true,
-                navText: [
-                    "<span class='lnr lnr-chevron-left'></span>",
-                    "<span class='lnr lnr-chevron-right'></span>"
-                ],
-                items: 1,
-                autoplayHoverPause:true,
-                autoplaySpeed: 1600,
-                navSpeed: 1600
-            });
-        }
-
-        carouselInit();
-
-        $('a[data-toggle="tab"]').on("shown.bs.tab", function(e) {
-            e.preventDefault();
-            carouselInit();
+        $('.home_slider').owlCarousel({
+            loop:true,
+            margin:0,
+            nav:false,
+            autoplay:true,
+            dots: true,
+            navText: [
+                "<span class='lnr lnr-chevron-left'></span>",
+                "<span class='lnr lnr-chevron-right'></span>"
+            ],
+            items: 1,
+            autoplayHoverPause:true,
+            autoplaySpeed: 1600,
+            navSpeed: 1600
         });
 
         // $(window).trigger('resize');
@@ -126,7 +137,7 @@
             $(this).find('p').css( "line-height", function(){
                 return line_height + 'px'
             })
-        })
+        });
 
     })
 
